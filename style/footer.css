@@ -5,23 +5,17 @@
     #58391C
 */
 .footer{
-    position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #6A492B;
     color: white;
     text-align: left;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.footer ul{
-    list-style-type: square;
-    display: inline;
+    padding-bottom: 5px;
 }
 .footer a{
     color: white;
     font-weight: bold;
-}
-.footer a:link{
-    text-decoration: none;
+    font-size: 20px;
 }

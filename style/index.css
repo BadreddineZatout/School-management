@@ -14,7 +14,7 @@ body{
     overflow: hidden;
     height: 20%;
     width: 70%;
-    margin: 50px auto;
+    margin:100px auto 10px;
 }
 /*****************Slide animation**********************/
 @-webkit-keyframes slide-animation{
@@ -48,3 +48,22 @@ div.slide-images:hover{
     -webkit-animation-play-state: paused;
 }
 /*************************end animation*****************************/
+
+/*************************Les articles*****************************/
+div.card{
+    background-color: #fde7ce;
+    padding: 10px;
+    margin: 20px 0px;
+}
+div.card:hover{
+    z-index: 1;
+    transform: scale(1.15);
+}
+div.card-body a.btn{
+    background-color: #6A492B;
+    color: white;
+}
+/*************************end Les articles*****************************/
+
+
+

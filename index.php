@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php   require_once 'layout/link.php'    ?>
-    <link rel="stylesheet" href="../style/index.css">
+    <?php   require_once 'includes/link.php'    ?>
+    <link rel="stylesheet" href="style/index.css">
     <title>Acceuil</title>
 </head>
 <body>
     <?php
-        include 'layout/header.php'
+        include 'includes/header.php'
     ?>
     <div class="slider-frame">
         <div class="slide-images">
@@ -28,13 +28,80 @@
         </div>
     </div>
     <?php
-        include 'layout/menu.php'
+        include 'includes/menu.php'
     ?>
-    <div>
-
+    <div class="row ml-2 mb-5">
+        <div class="col-12 card-deck">
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 card-deck">
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+        </div>
     </div>
     <?php
-        include 'layout/footer.php'
+        include 'includes/footer.php'
     ?>
 </body>
 </html>
