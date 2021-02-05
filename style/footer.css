@@ -1,0 +1,27 @@
+/*  pallete
+    #F88F01
+    #E27802
+    #6A492B
+    #58391C
+*/
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #6A492B;
+    color: white;
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer ul{
+    list-style-type: square;
+    display: inline;
+}
+.footer a{
+    color: white;
+    font-weight: bold;
+}
+.footer a:link{
+    text-decoration: none;
+}

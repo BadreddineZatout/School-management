@@ -1,0 +1,43 @@
+#menu-container{
+    font-size: 24px;
+}
+#menu{
+    color: white;
+}
+#menu li{
+    border: solid #58391C;
+    border-radius: 10px;
+    margin-right: 1%;
+    padding: 10px 25px;
+    background-color: #E27802;
+}
+#menu a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+#menu li:hover{
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+.dropdown{
+    position: absolute;
+    display: none;
+    background-color: #E27802;
+    border: solid #6A492B;
+    border-radius: 10px;
+    min-width: 160px;
+    margin-top: 12px;
+    z-index: 1;
+}
+.dropdown a {
+    font-weight: lighter;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown a:hover{
+    font-weight: bolder;
+}
+li.drop:hover .dropdown{
+    display: block;
+}

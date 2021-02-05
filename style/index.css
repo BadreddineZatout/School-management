@@ -1,0 +1,50 @@
+/*  pallete
+    #F88F01
+    #E27802
+    #6A492B
+    #58391C
+*/
+body{
+    background-color: #fde7ce;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+.slider-frame{
+    overflow: hidden;
+    height: 20%;
+    width: 70%;
+    margin: 50px auto;
+}
+/*****************Slide animation**********************/
+@-webkit-keyframes slide-animation{
+    0% {bottom: 0px;}
+    10% {bottom: 0px;}
+    20% {bottom: calc(500px + 5%);}
+    30% {bottom: calc(500px + 5%);}
+    40% {bottom: calc(1000px + 10%);}
+    50% {bottom: calc(1000px + 10%);}
+    60% {bottom: calc(1500px + 15%);}
+    70% {bottom: calc(1500px + 15%);}
+    80% {bottom: calc(1000px + 10%);}
+    90% {bottom: calc(500px + 5%);}
+    100% {bottom: 0px;}
+}
+.slide-images{
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+    -webkit-animation-name: slide-animation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.img-container{
+    position: relative;
+    float: centre;
+}
+div.slide-images:hover{
+    -webkit-animation-play-state: paused;
+}
+/*************************end animation*****************************/
