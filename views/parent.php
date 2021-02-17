@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_SESSION['username'])){
+        header('location:/?action=parent_login');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

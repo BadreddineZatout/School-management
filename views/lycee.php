@@ -47,7 +47,46 @@
                 </div>
             </div>
         </div>
+        <div class="row mx-auto mb-5">
+        <?php 
+            for ($i=0; $i<2; $i++) {
+                ?>
+        <div class="col-12 card-deck">
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title">card1</h4>
+                    <p class="card-text">card</p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
+            </div>
+        </div>
     <?php
+        }
         require_once 'includes/footer.php'
     ?>
 </body>
