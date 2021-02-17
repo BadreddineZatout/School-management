@@ -5,18 +5,20 @@
     #58391C
 */
 .footer{
-    position: fixed;
+    top: 50px;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100vw; 
     background-color: #6A492B;
-    color: white;
     text-align: left;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 }
 .footer a{
     color: white;
     font-weight: bold;
     font-size: 20px;
+}
+.footer a:hover{
+    color: #E27802;
 }

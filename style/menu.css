@@ -21,6 +21,9 @@
     font-weight: bolder;
     transform: scale(1.1);
 }
+#menu a:hover{
+    color: #6A492B;
+}
 .dropdown{
     position: absolute;
     display: none;
