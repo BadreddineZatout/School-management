@@ -22,15 +22,37 @@ if (!isset($_GET['action'])){
             break;
         case 'eleve':
             require_once ('./controllers/EleveController.php');
-            eleve_page();
+            $ec = new EleveController();
+            $ec->eleve_page();
             break;
         case 'parent':
             require_once ('./controllers/ParentController.php');
-            parent_page();
+            $pc = new ParentController();
+            $pc->parent_page();
+            break;
+        case 'admin':
+            require_once ('./controllers/AdminController.php');
+            $ac = new AdminController();
+            $ac->admin_page();
             break;
         case 'contact':
             require_once ('./controllers/ContactController.php');
             contact_page();
+            break;
+        case 'eleve_login':
+            require_once ('./controllers/UserController.php');
+            $us = new UserController(0);
+            $us->login_page();
+            break;
+        case 'parent_login':
+            require_once ('./controllers/UserController.php');
+            $us = new UserController(1);
+            $us->login_page();
+            break;
+        case 'admin_login':
+            require_once ('./controllers/UserController.php');
+            $us = new UserController(2);
+            $us->login_page();
             break;
     }
 }
