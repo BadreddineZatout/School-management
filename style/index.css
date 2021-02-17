@@ -4,12 +4,6 @@
     #6A492B
     #58391C
 */
-body{
-    background-color: #fff8f1;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
 .slider-frame{
     overflow: hidden;
     height: 20%;

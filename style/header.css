@@ -10,3 +10,9 @@
     color: white;
     margin-right: 20px;
 }
+body{
+    background-color: #fff8f1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}

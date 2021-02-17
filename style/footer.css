@@ -5,6 +5,7 @@
     #58391C
 */
 .footer{
+    position: relative;
     top: 50px;
     left: 0;
     bottom: 0;
