@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-        require 'includes/header.php'
+        require 'includes/header.php';
     ?>
     <div class="slider-frame">
         <div class="slide-images">
