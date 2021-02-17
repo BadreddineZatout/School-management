@@ -1,6 +1,6 @@
 <?php
     if(!isset($_SESSION['username'])){
-        header('location:/?action=eleve_login');
+        header('location:/?action=admin_login');
     }
 ?>
 <!DOCTYPE html>
@@ -10,10 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once 'includes/link.php' ?>
-    <title>Espace Eleve</title>
+    <title>Admin</title>
 </head>
 <body>
-    <?php 
+<?php 
         require_once 'includes/header.php';
         require_once 'includes/menu.php';
     ?>
