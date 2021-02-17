@@ -1,0 +1,13 @@
+div.card{
+    background-color: #fde7ce;
+    padding: 10px;
+    margin: 20px 0px;
+}
+div.card:hover{
+    z-index: 1;
+    transform: scale(1.15);
+}
+div.card-body a.btn{
+    background-color: #6A492B;
+    color: white;
+}

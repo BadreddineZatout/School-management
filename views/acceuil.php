@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php   require_once 'includes/link.php' ?>
-    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/acceuil.css">
+    <link rel="stylesheet" href="style/articles.css">
     <title>Acceuil</title>
 </head>
 <body>
