@@ -1,0 +1,28 @@
+div.card{
+    background-color: inherit;
+}
+div.card-header{
+    background-color: #fce9d7;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+div.card-header h3{
+    color: #58391C;
+}
+i.fas{
+    color: #E27802;
+}
+p b{
+    font-size: 20px;
+    color: #58391C;
+    margin-left: 30px;
+}
+div.footer{
+    position: fixed;
+    top: 93vh;
+    left: 0;
+    bottom: 0;
+    width: 100vw; 
+    background-color: #6A492B;
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
