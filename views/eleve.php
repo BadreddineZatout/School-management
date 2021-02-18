@@ -30,6 +30,13 @@
             </ul>
         </div>
         <div class="col-sm-9 row">
+            <div class="col-sm-12 navbar navbar-expand-sm">
+                <ul id="switch" class="navbar-nav ml-auto">
+                    <li class="nav-item"><button class="btn">Emploie du Temps</button></li>
+                    <li class="nav-item"><button class="btn">Notes</button></li>
+                    <li class="nav-item"><button class="btn">Activités Extrascolaire</button></li>
+                </ul>
+            </div>
             <div class="col-sm-12">
                 <table id="edt" class="table table-bordered">
                     <thead>
