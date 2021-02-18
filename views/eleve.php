@@ -19,7 +19,7 @@
         require_once 'includes/menu.php';
     ?>
     <div class="row mx-auto">
-        <div class="col-sm-3 align-self-start info">
+        <div class="col-sm-3 align-self-start ml-2 info">
             <ul class="list-group">
                 <li class="list-group-item">ID: 17/0083</li>
                 <li class="list-group-item">Nom: Zatout</li>

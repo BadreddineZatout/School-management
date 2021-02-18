@@ -19,7 +19,7 @@
         require_once 'includes/menu.php';
     ?>
     <div class="row mx-auto">
-        <div class="col-sm-3 info">
+        <div class="col-sm-3 ml-2 info">
             <ul class="list-group">
                 <li class="list-group-item">ID: 17/0083</li>
                 <li class="list-group-item">Nom: Zatout</li>
@@ -30,7 +30,7 @@
             </ul>
         </div>
         <div class="col-sm-8 ml-5 row">
-            <div col-sm-12>
+            <div class="col-sm-12 align-self-start">
                 <h1>Liste des enfants:</h1>
             </div>
             <div class="col-sm-12">
