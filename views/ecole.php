@@ -13,7 +13,7 @@
         require_once 'includes/header.php';
         require_once 'includes/menu.php';
     ?>
-    <div class="row">
+    <div class="row mx-auto">
         <div class="col-sm-10 card ppt mx-auto">
             <div class='card-header'>
                 <h1>Nom ecole</h1>
