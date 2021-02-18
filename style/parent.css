@@ -1,0 +1,27 @@
+.info{
+    border: solid #58391C;
+    padding: 50px 10px;
+
+}
+div.info ul li{
+    color: #58391C;
+    background-color: #fce9d7;
+    margin-bottom: 15px;
+}
+div.info ul li:hover{
+    background-color: #F88F01;
+    font-weight: bolder;
+}
+#enfants li{
+    color: #58391C;
+    background-color: #fce9d7;
+    margin-bottom: 15px;
+}
+#enfants li a{
+    color: #58391C;
+}
+#enfants li a:hover{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 24px;
+}
