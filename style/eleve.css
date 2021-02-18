@@ -1,6 +1,7 @@
 .info{
     border: solid #58391C;
     padding: 50px 10px;
+
 }
 div.info ul li{
     color: #58391C;
@@ -11,12 +12,13 @@ div.info ul li:hover{
     background-color: #F88F01;
     font-weight: bolder;
 }
-.edt{
-
+#edt th,  #edt td{
+    text-align: center;
 }
-.notes{
 
+#notes th{
+    text-align: center;
 }
-.activites{
-    
+#activites{
+
 }

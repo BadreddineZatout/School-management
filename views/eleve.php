@@ -19,7 +19,7 @@
         require_once 'includes/menu.php';
     ?>
     <div class="row mx-auto">
-        <div class="col-sm-3 info">
+        <div class="col-sm-3  align-self-start info">
             <ul class="list-group">
                 <li class="list-group-item">ID: 17/0083</li>
                 <li class="list-group-item">Nom: Zatout</li>
@@ -31,13 +31,171 @@
         </div>
         <div class="col-sm-9 row">
             <div class="col-sm-12">
-                <table class="table edt"></table>
+                <table id="edt" class="table table-bordered">
+                    <thead>
+                        <th></th>
+                        <th>Dimanche</th>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8h-9h</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>9h-10h</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10h-11h</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10h-12h</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>1h30-2h30</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>2h30-3h30</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>3h30-4h30</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>4h30-5h30</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="col-sm-12">
-                <table class="table notes"></table>
+                <table id="notes" class="table table-bordered">
+                    <thead>
+                        <th></th>
+                        <th>Evaluaion</th>
+                        <th>Interrogation 1</th>
+                        <th>Interrogation 2</th>
+                        <th>Examen</th>
+                        <th>Moyenne</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Math</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Physique</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Science</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Langue Arabe</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Langue Française</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Langue Anglaise</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Science Islamique</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Histo/Geo</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sport</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="col-sm-12">
-                <table class="table activites"></table>
+                <table id="activites" class="table"></table>
             </div>
         </div>
     </div>
