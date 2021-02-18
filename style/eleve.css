@@ -1,0 +1,13 @@
+.info{
+    border: solid #58391C;
+    padding: 50px 10px;
+}
+div.info ul li{
+    color: #58391C;
+    background-color: #fce9d7;
+    margin-bottom: 15px;
+}
+div.info ul li:hover{
+    background-color: #F88F01;
+    font-weight: bolder;
+}
