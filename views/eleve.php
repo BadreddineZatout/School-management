@@ -19,7 +19,7 @@
         require_once 'includes/menu.php';
     ?>
     <div class="row mx-auto">
-        <div class="col-sm-3  align-self-start info">
+        <div class="col-sm-3 align-self-start info">
             <ul class="list-group">
                 <li class="list-group-item">ID: 17/0083</li>
                 <li class="list-group-item">Nom: Zatout</li>
@@ -35,6 +35,7 @@
                     <li class="nav-item"><button class="btn">Emploie du Temps</button></li>
                     <li class="nav-item"><button class="btn">Notes</button></li>
                     <li class="nav-item"><button class="btn">Activités Extrascolaire</button></li>
+                    <li class="nav-item"><button class="btn">Remarques des Enseignants</button></li>
                 </ul>
             </div>
             <div class="col-sm-12">
@@ -202,7 +203,36 @@
                 </table>
             </div>
             <div class="col-sm-12">
-                <table id="activites" class="table"></table>
+                <table id="activites" class="table table-bordered">
+                    <thead>
+                        <th>Activité</th>
+                        <th>Date</th>
+                        <th>Lieu</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-12">
+                <table id="remarques" class="table table-bordered">
+                    <thead>
+                        <th>Enseignant</th>
+                        <th>Matiere</th>
+                        <th>Remarque</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

@@ -12,16 +12,17 @@ div.info ul li:hover{
     background-color: #F88F01;
     font-weight: bolder;
 }
-#edt th,  #edt td{
+table th{
+    color: #58391C;
     text-align: center;
 }
-
-#notes th{
-    text-align: center;
+table td{
+    text-align: centre;
 }
 #activites{
 
 }
+
 ul#switch button.btn{
     border: solid #F88F01 1px;
     margin-left: 5px;
