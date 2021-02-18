@@ -29,8 +29,16 @@
                 <li class="list-group-item">Classe: 2CS SIL1</li>
             </ul>
         </div>
-        <div class="col-sm-9">
-
+        <div class="col-sm-9 row">
+            <div class="col-sm-12">
+                <table class="table edt"></table>
+            </div>
+            <div class="col-sm-12">
+                <table class="table notes"></table>
+            </div>
+            <div class="col-sm-12">
+                <table class="table activites"></table>
+            </div>
         </div>
     </div>
     <?php
