@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_GET['action'])){
+        header('location:/');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

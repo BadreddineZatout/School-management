@@ -1,4 +1,7 @@
 <?php
+    if(!isset($_GET['action'])){
+        header('location:/');
+    }
     if(!isset($_SESSION['username'])){
         header('location:/?action=admin_login');
     }
