@@ -21,45 +21,38 @@
     ?>
     
     <div class="row mx-auto mb-5">
-    <?php 
-        for ($i=0; $i<2; $i++) {
-            ?>
-    <div class="col-12 card-deck">
-        <div class="card">
-            <img class="card-img-top" src="" alt="card image">
-            <div class="card-body">
-                <h4 class="card-title">card1</h4>
-                <p class="card-text">card</p>
-                <a class="btn" href="#">Afficher la suite</a>
+        <div class="col-12 card-deck">
+        <?php 
+            foreach($articles[0] as $article)
+            {
+        ?> 
+            <div class="card col-3">
+                <img class="card-img-top" src="<?= $article['image'] ?>" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title"><?= $article['titre'] ?></h4>
+                    <p class="card-text"><?= $article['contenu'] ?></p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
             </div>
+        <?php } ?>
         </div>
-        <div class="card">
-            <img class="card-img-top" src="" alt="card image">
-            <div class="card-body">
-                <h4 class="card-title">card1</h4>
-                <p class="card-text">card</p>
-                <a class="btn" href="#">Afficher la suite</a>
+        <div class="col-12 card-deck">
+        <?php 
+            foreach($articles[1] as $article)
+            {
+        ?> 
+            <div class="card col-3">
+                <img class="card-img-top" src="<?= $article['image'] ?>" alt="card image">
+                <div class="card-body">
+                    <h4 class="card-title"><?= $article['titre'] ?></h4>
+                    <p class="card-text"><?= $article['contenu'] ?></p>
+                    <a class="btn" href="#">Afficher la suite</a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="" alt="card image">
-            <div class="card-body">
-                <h4 class="card-title">card1</h4>
-                <p class="card-text">card</p>
-                <a class="btn" href="#">Afficher la suite</a>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="" alt="card image">
-            <div class="card-body">
-                <h4 class="card-title">card1</h4>
-                <p class="card-text">card</p>
-                <a class="btn" href="#">Afficher la suite</a>
-            </div>
+        <?php } ?>
         </div>
     </div>
     <?php
-        }
         require_once 'includes/footer.php'
     ?>
 </body>
