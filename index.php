@@ -1,7 +1,8 @@
 <?php
 if (!isset($_GET['action'])){
     require_once ('./controllers/AcceuilController.php');
-    main_page();
+    $ac = new AcceuilController();
+    $ac->main_page();
 }else{
     switch($_GET['action']){
         case 'ecole':
