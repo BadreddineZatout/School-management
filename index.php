@@ -12,15 +12,18 @@ if (!isset($_GET['action'])){
             break;
         case 'ap':
             require_once ('./controllers/PrimaireController.php');
-            primaire_page();
+            $pc = new PrimaireController();
+            $pc->primaire_page();
             break;
         case 'am':
             require_once ('./controllers/CEMController.php');
-            cem_page();
+            $cc = new CEMController();
+            $cc->cem_page();
             break;
         case 'as':
             require_once ('./controllers/LyceeController.php');
-            lycee_page();
+            $lc = new LyceeController();
+            $lc->lycee_page();
             break;
         case 'eleve':
             require_once ('./controllers/EleveController.php');
