@@ -2,9 +2,11 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    // if(!isset($_SESSION['username'])){
-    //     header('location:/?action=eleve_login');
-    // }
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header('location:/?action=eleve_login');
+    }
+    session_unset();
 ?>
 <!DOCTYPE html>
 <html lang="en">
