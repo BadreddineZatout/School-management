@@ -3,7 +3,7 @@
         header('location:/');
     }
     session_start();
-    if(!isset($_SESSION['username'])){
+    if(!isset($_SESSION['username'])|| $_SESSION['type']<1){
         header('location:/?action=parent_login');
     }
     session_unset();
