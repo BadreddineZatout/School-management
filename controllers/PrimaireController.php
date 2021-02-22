@@ -7,7 +7,7 @@ class PrimaireController{
         $articles = $this->get_articles();
         require_once 'views/primaire.php';
     }
-    public function get_cadres(){
+    public function get_cadres($cycle){
         require_once 'views/cycle/cycle-cadre.php';
     }
     public function get_articles(){

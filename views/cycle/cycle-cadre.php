@@ -12,7 +12,7 @@
         <div class="card-body">
             <h4 class="card-title">Enseignants</h4>
             <p class="card-text">Consulter la liste des enseignants et leur heure de reception</p>
-            <a class="btn" href="#">Afficher la suite</a>
+            <a class="btn" href="/?action=ens&cycle=<?= $cycle ?>">Afficher la suite</a>
         </div>
     </div>
     <div class="card">

@@ -60,5 +60,16 @@ if (!isset($_GET['action'])){
             $us = new UserController(2);
             $us->login_page();
             break;
+        case 'edt':
+            break;
+        case 'ens':
+            require_once ('./controllers/EnsController.php');
+            $ec = new EnsController();
+            $ec->EnsPage();
+            break;
+        case 'info-pratique':
+            break;
+        case 'restau':
+            break;
     }
 }
