@@ -7,6 +7,6 @@ class LyceeController{
         require_once 'views/lycee.php';
     }
     public function get_cadres(){
-        require_once 'views/cycle-cadre.php';
+        require_once 'views/cycle/cycle-cadre.php';
     }
 }
