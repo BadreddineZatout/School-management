@@ -24,13 +24,13 @@
         </div>
         <div class="card-body row p-5">
             <div class="col-sm-12 mb-5">
-                <p><i class="fas fa-map-pin fa-3x"></i> <b>Adresse ecole</b></p>
+                <p><i class="fas fa-map-pin fa-3x"></i> <b><?= $contact['adresse'] ?></b></p>
             </div>
             <div class="col-sm-12 mb-5">
-                <p><i class="fas fa-phone fa-2x"></i> <b>065720706</b></p>
+                <p><i class="fas fa-phone fa-2x"></i> <b><?= $contact['telephone'] ?></b></p>
             </div>
             <div class="col-sm-12">
-                <p><i class="fas fa-tty fa-2x"></i> <b>0797498940</b></p>
+                <p><i class="fas fa-tty fa-2x"></i> <b><?= $contact['fax'] ?></b></p>
             </div>
         </div>
     </div>
