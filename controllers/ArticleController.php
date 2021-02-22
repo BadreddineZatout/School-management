@@ -5,6 +5,6 @@ class ArticlesController{
     
     public function getArticles(){
         $articles = new Article();
-        return $articles->getArticles();
+        return $articles->getArticles(0);
     }
 }
