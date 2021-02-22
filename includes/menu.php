@@ -1,7 +1,7 @@
 <div id="menu-container" class="navbar navbar-expand-sm justify-content-center">
     <ul id="menu" class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="/">Acceuil</a></li>
-        <li class="nav-item"><a class="nav-link" href="/?action=ecole">Ecole</a></li>
+        <li class="nav-item"><a class="nav-link" href="/?action=ecole">Presentation</a></li>
         <li class="nav-item drop">
             <a class="nav-link dropdown-toggle" href="#">Cycles</a>
             <div class="dropdown">
