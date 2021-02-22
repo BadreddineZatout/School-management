@@ -7,7 +7,8 @@ if (!isset($_GET['action'])){
     switch($_GET['action']){
         case 'ecole':
             require_once ('./controllers/EcoleController.php');
-            ppt_page();
+            $ec = new EcoleController();
+            $ec->ppt_page();
             break;
         case 'ap':
             require_once ('./controllers/PrimaireController.php');
