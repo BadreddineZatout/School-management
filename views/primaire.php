@@ -21,7 +21,7 @@
     ?>
     
     <div class="row mx-auto mb-5">
-    <div class="col-12 card-deck">
+        <div class="col-12 card-deck">
         <?php 
             foreach($articles[0] as $article)
             {
