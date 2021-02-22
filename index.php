@@ -42,7 +42,8 @@ if (!isset($_GET['action'])){
             break;
         case 'contact':
             require_once ('./controllers/ContactController.php');
-            contact_page();
+            $cc = new ContactController();
+            $cc->contact_page();
             break;
         case 'eleve_login':
             require_once ('./controllers/UserController.php');
