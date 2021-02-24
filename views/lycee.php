@@ -17,7 +17,7 @@
     <?php 
         require_once 'includes/header.php';
         require_once 'includes/menu.php';
-        $lc->get_cadres();
+        $lc->get_cadres(3);
     ?>
     
     <div class="row mx-auto mb-5">

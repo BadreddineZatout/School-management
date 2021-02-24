@@ -8,7 +8,7 @@ class LyceeController{
         $articles = $this->get_articles();
         require_once 'views/lycee.php';
     }
-    public function get_cadres(){
+    public function get_cadres($cycle){
         require_once 'views/cycle/cycle-cadre.php';
     }
     public function get_articles(){
