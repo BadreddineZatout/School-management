@@ -4,7 +4,7 @@
         <div class="card-body">
             <h4 class="card-title">Emploi de temps</h4>
             <p class="card-text">Consulter l'emploi du temps</p>
-            <a class="btn" href="#">Afficher la suite</a>
+            <a class="btn" href="/?action=edt&cycle=<?= $cycle ?>">Afficher la suite</a>
         </div>
     </div>
     <div class="card">
@@ -20,7 +20,7 @@
         <div class="card-body">
             <h4 class="card-title">Inforamtions Pratiques</h4>
             <p class="card-text">Consulter les informations pratiques</p>
-            <a class="btn" href="#">Afficher la suite</a>
+            <a class="btn" href="/?action=info-pratique&cycle=<?= $cycle ?>">Afficher la suite</a>
         </div>
     </div>
     <div class="card">
@@ -28,7 +28,7 @@
         <div class="card-body">
             <h4 class="card-title">Restauration</h4>
             <p class="card-text">Consulter le planning de restauration</p>
-            <a class="btn" href="#">Afficher la suite</a>
+            <a class="btn" href="/?action=restau&cycle=<?= $cycle ?>">Afficher la suite</a>
         </div>
     </div>
 </div>

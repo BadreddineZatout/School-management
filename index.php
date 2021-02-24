@@ -61,6 +61,9 @@ if (!isset($_GET['action'])){
             $us->login_page();
             break;
         case 'edt':
+            require_once ('./controllers/EDTController.php');
+            $ec = new EDTController();
+            $ec->edt_page();
             break;
         case 'ens':
             require_once ('./controllers/EnsController.php');
@@ -68,8 +71,11 @@ if (!isset($_GET['action'])){
             $ec->EnsPage();
             break;
         case 'info-pratique':
+            require_once ('./controllers/InfoPController.php');
             break;
         case 'restau':
+            require_once ('./controllers/RestauController.php');
+
             break;
         case 'article':
             require('./controllers/AcceuilController.php');
