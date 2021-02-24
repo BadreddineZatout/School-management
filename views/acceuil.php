@@ -43,7 +43,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><?= $article['titre'] ?></h4>
                     <p class="card-text"><?= $article['contenu'] ?></p>
-                    <a class="btn" href="#">Afficher la suite</a>
+                    <a class="btn" href='/?action=article&article=<?= $article['id'] ?>'>Afficher la suite</a>
                 </div>
             </div>
         <?php } ?>
@@ -58,7 +58,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><?= $article['titre'] ?></h4>
                     <p class="card-text"><?= $article['contenu'] ?></p>
-                    <a class="btn" href="#">Afficher la suite</a>
+                    <a class="btn" href='/?action=article&article=<?= $article['id'] ?>'>Afficher la suite</a>
                 </div>
             </div>
         <?php } ?>

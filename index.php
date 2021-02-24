@@ -71,5 +71,10 @@ if (!isset($_GET['action'])){
             break;
         case 'restau':
             break;
+        case 'article':
+            require('./controllers/AcceuilController.php');
+            $ac = new AcceuilController();
+            $ac->article_page();
+            break;
     }
 }

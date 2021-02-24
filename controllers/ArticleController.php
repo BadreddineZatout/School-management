@@ -11,6 +11,10 @@ class ArticlesController{
     public function getArticles(){
         return $this->article->getArticles(0);
     }
+    public function getArticle($id)
+    {
+        return $this->article->getArticle($id);
+    }
     public function get_articles_AP(){
         return $this->article->get_articles_AP();
     }
