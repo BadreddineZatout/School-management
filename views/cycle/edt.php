@@ -35,20 +35,21 @@
             </thead>
             <tbody>
             <?php
+            $style = 'style="text-align: center;"';
             foreach ($edt_rows as $row) {
                 ?>
                 <tr>
-                    <td><?= $row['cycle'] ?></td>
-                    <td><?= $row['classe'] ?></td>
-                    <td><?= $row['jour'] ?></td>
-                    <td><?= $row['t1'] ?></td>
-                    <td><?= $row['t2'] ?></td>
-                    <td><?= $row['t3'] ?></td>
-                    <td><?= $row['t4'] ?></td>
-                    <td><?= $row['t5'] ?></td>
-                    <td><?= $row['t6'] ?></td>
-                    <td><?= $row['t7'] ?></td>
-                    <td><?= $row['t8'] ?></td>
+                    <td <?= $style ?>><?= $row['cycle'] ?></td>
+                    <td <?= $style ?>><?= $row['classe'] ?></td>
+                    <td <?= $style ?>><?= $row['jour'] ?></td>
+                    <td <?= $style ?>><?= $row['t1'] ?></td>
+                    <td <?= $style ?>><?= $row['t2'] ?></td>
+                    <td <?= $style ?>><?= $row['t3'] ?></td>
+                    <td <?= $style ?>><?= $row['t4'] ?></td>
+                    <td <?= $style ?>><?= $row['t5'] ?></td>
+                    <td <?= $style ?>><?= $row['t6'] ?></td>
+                    <td <?= $style ?>><?= $row['t7'] ?></td>
+                    <td <?= $style ?>><?= $row['t8'] ?></td>
                 </tr>
             <?php
             } ?>
