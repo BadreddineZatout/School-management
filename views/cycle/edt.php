@@ -35,6 +35,7 @@
             </thead>
             <tbody>
             <?php
+            if(!is_null($edt_rows)){
             $style = 'style="text-align: center;"';
             foreach ($edt_rows as $row) {
                 ?>
@@ -52,6 +53,9 @@
                     <td <?= $style ?>><?= $row['t8'] ?></td>
                 </tr>
             <?php
+            }
+            }else{
+                header('location:/');
             } ?>
             </tbody>
         </table>

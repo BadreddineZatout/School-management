@@ -27,6 +27,7 @@
             </thead>
             <tbody>
                 <?php 
+                if(!is_null($ens_rows)){
                     foreach ($ens_rows as $row) {
                         ?>
                     <tr>
@@ -35,6 +36,9 @@
                         <td style="text-align: center;"><?= $row['temps_recep'] ?></td>
                     </tr>
                 <?php
+                    }
+                    }else{
+                        header('location:/');
                     }
                 ?>
             </tbody>

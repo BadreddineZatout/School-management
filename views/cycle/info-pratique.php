@@ -19,7 +19,7 @@
     ?>
     <div class="row mx-auto">
         <?php
-
+            if(!is_null($infos)){
             foreach ($infos as $info) {
                 ?>
         <div class="col-sm-10 card mx-auto mb-5">
@@ -31,7 +31,10 @@
             </div>
         </div>
         <?php
-            } 
+            }
+            }else{
+                header('location:/');
+            }
         ?>
     </div>
     <?php

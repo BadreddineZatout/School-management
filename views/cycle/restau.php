@@ -35,6 +35,8 @@
                 </tr>
                 <?php
                     }
+                    }else{
+                        header('location:/');
                     } ?>
             </tbody>
         </table>
