@@ -72,6 +72,8 @@ if (!isset($_GET['action'])){
             break;
         case 'info-pratique':
             require_once ('./controllers/InfoPController.php');
+            $ic = new InfoPController();
+            $ic->infoPratiquePage();
             break;
         case 'restau':
             require_once ('./controllers/RestauController.php');
