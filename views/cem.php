@@ -17,7 +17,7 @@
     <?php 
         require_once 'includes/header.php';
         require_once 'includes/menu.php';
-        $cc->get_cadres();
+        $cc->get_cadres(2);
     ?>
     <div class="row mx-auto mb-5">
         <div class="col-12 card-deck">
