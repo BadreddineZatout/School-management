@@ -77,7 +77,8 @@ if (!isset($_GET['action'])){
             break;
         case 'restau':
             require_once ('./controllers/RestauController.php');
-
+            $rc = new RestauController();
+            $rc->RestauPage();
             break;
         case 'article':
             require('./controllers/AcceuilController.php');
