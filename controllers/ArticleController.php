@@ -28,6 +28,9 @@ class ArticlesController{
         $a = [];
         $tmp = [];
         foreach($articles as $article){
+            if (strlen($article['contenu'])>100){
+                $article['contenu'] = substr($article['contenu'], 0, 100) . '...';
+            }
             array_push($tmp, $article);
         }
         $a[0] = array_slice($tmp, 0, 4);
