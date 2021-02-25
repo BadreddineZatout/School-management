@@ -104,12 +104,8 @@
                         <th>Date</th>
                         <th>Lieu</th>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="activite-body">
+                        
                     </tbody>
                 </table>
             </div>

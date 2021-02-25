@@ -91,5 +91,10 @@ if (!isset($_GET['action'])){
             $ec = new EleveController();
             echo ($ec->getNotes());
             break;
+        case 'activites':
+            require_once ('./controllers/EleveController.php');
+            $ec = new EleveController();
+            echo ($ec->getActivites());
+            break;
     }
 }

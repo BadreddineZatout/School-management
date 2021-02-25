@@ -2,6 +2,7 @@
 require_once 'models/EDT.php';
 require_once 'models/Model.php';
 require_once 'models/Note.php';
+require_once 'models/Activite.php';
 class Eleve extends Model{
 
     public function getInfo($user){
@@ -19,5 +20,10 @@ class Eleve extends Model{
     {
         $notes = new Note();
         return $notes->getEleveNotes($eleve_id);
+    }
+    public function getActivites($eleve_id)
+    {
+        $activites = new Activite();
+        return $activites->getEleveActivites($eleve_id);
     }
 }

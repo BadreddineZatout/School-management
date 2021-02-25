@@ -20,6 +20,7 @@ $('#activ-btn').click(function () {
     $('#notes').hide();
     $('#remarques').hide();
     $('#edt').hide();
+    activites();
     $('#activites').show();
 });
 $('#rque-btn').click(function () { 
