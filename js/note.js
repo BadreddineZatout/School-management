@@ -3,12 +3,12 @@ function Notes(){
         type: "GET",
         url: "/?action=notes",
         success: function (response) {
-            build(JSON.parse(response));
+            buildNotes(JSON.parse(response));
         }
     });
 }
 
-function build(rows){
+function buildNotes(rows){
     $('#notes-body').html('');
     for (let row of rows) {
         let tr = $('<tr></tr>');
