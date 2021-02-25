@@ -2,11 +2,9 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    session_start();
     if(!isset($_SESSION['username'])|| $_SESSION['type']<1){
         header('location:/?action=parent_login');
     }
-    session_unset();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,12 +24,9 @@
     <div class="row mx-auto">
         <div class="col-sm-3 ml-2 info">
             <ul class="list-group">
-                <li class="list-group-item">ID: 17/0083</li>
-                <li class="list-group-item">Nom: Zatout</li>
-                <li class="list-group-item">Prenom: Badreddine</li>
-                <li class="list-group-item">Date de Naissance: 14/05/1999</li>
-                <li class="list-group-item">Année Scolaire: 2020/2021</li>
-                <li class="list-group-item">Classes: 2CS SIL1, 2CS SQI3, 2CS SIT1</li>
+            <li class="list-group-item">ID: <?= $parent['id'] ?></li>
+                <li class="list-group-item">Nom: <?= $parent['nom'] ?></li>
+                <li class="list-group-item">Prenom: <?= $parent['prenom'] ?></li>
             </ul>
         </div>
         <div class="col-sm-8 ml-5 row">
@@ -40,9 +35,12 @@
             </div>
             <div class="col-sm-12">
                 <ul id="enfants" class="list-group">
-                    <li class="list-group-item"><a href="/?action=eleve">enfant 1</a></li>
-                    <li class="list-group-item"><a href="/?action=eleve">enfant 2</a></li>
-                    <li class="list-group-item"><a href="/?action=eleve">enfant 3</a></li>
+                <?php
+                    foreach ($enfants as $enfant) {
+                        ?>
+                    <li class="list-group-item"><a href="/?action=eleve"><?= $enfant['nom'] .' '. $enfant['prenom'] ?></a></li>
+                <?php
+                    } ?>
                 </ul>
             </div>
         </div>
