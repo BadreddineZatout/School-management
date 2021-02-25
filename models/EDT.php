@@ -11,4 +11,11 @@ class edt extends Model{
             return $rows;
         }
     }
+    public function getEleveEDT($class)
+    {
+        $query = $this->db->prepare('SELECT edt.*, classes.classe FROM (edt JOIN classes ON classes.id = edt.class)  WHERE edt.class = ?');
+        $query->execute([$class]);
+        $rows = $query->fetchAll();
+        return $rows;
+    }
 }

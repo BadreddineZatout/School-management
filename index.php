@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_GET['action'])){
     require_once ('./controllers/AcceuilController.php');
     $ac = new AcceuilController();
@@ -84,6 +85,11 @@ if (!isset($_GET['action'])){
             require('./controllers/AcceuilController.php');
             $ac = new AcceuilController();
             $ac->article_page();
+            break;
+        case 'notes':
+            require_once ('./controllers/EleveController.php');
+            $ec = new EleveController();
+            echo ($ec->getNotes());
             break;
     }
 }

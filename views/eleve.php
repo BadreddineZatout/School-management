@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once 'includes/link.php' ?>
     <link rel="stylesheet" href="style/eleve.css">
+    <link rel="stylesheet" href="style/table.css">
     <title>Espace Eleve</title>
 </head>
 <body>
@@ -39,84 +40,45 @@
                     <li class="nav-item"><button id="edt-btn" class="btn">Emploie du Temps</button></li>
                     <li class="nav-item"><button id="note-btn" class="btn">Notes</button></li>
                     <li class="nav-item"><button id="activ-btn" class="btn">Activités Extrascolaire</button></li>
+                    <?php 
+                        if ($_SESSION['type'] >= 1){
+                    ?>
                     <li class="nav-item"><button id="rque-btn" class="btn">Remarques des Enseignants</button></li>
+                    <?php } ?>
                 </ul>
             </div>
             <div id="edt" class="col-sm-12">
-                <table class="table table-bordered">
+                <table id="edt" class="table table-bordered">
                     <thead>
-                        <th></th>
-                        <th>Dimanche</th>
-                        <th>Lundi</th>
-                        <th>Mardi</th>
-                        <th>Mercredi</th>
-                        <th>Jeudi</th>
+                        <th>Jour</th>
+                        <th>8h-9h</th>
+                        <th>9h-10h</th>
+                        <th>10h-11h</th>
+                        <th>10h-12h</th>
+                        <th>1h30-2h30</th>
+                        <th>2h30-3h30</th>
+                        <th>3h30-4h30</th>
+                        <th>4h30-5h30</th>
                     </thead>
                     <tbody>
+                    <?php
+                    $style = 'style="text-align: center;"';
+                    foreach ($edt_rows as $row) {
+                        ?>
                         <tr>
-                            <th>8h-9h</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td <?= $style ?>><?= $row['jour'] ?></td>
+                            <td <?= $style ?>><?= $row['t1'] ?></td>
+                            <td <?= $style ?>><?= $row['t2'] ?></td>
+                            <td <?= $style ?>><?= $row['t3'] ?></td>
+                            <td <?= $style ?>><?= $row['t4'] ?></td>
+                            <td <?= $style ?>><?= $row['t5'] ?></td>
+                            <td <?= $style ?>><?= $row['t6'] ?></td>
+                            <td <?= $style ?>><?= $row['t7'] ?></td>
+                            <td <?= $style ?>><?= $row['t8'] ?></td>
                         </tr>
-                        <tr>
-                            <th>9h-10h</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>10h-11h</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>10h-12h</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>1h30-2h30</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>2h30-3h30</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>3h30-4h30</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>4h30-5h30</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <?php
+                    }
+                    ?>
                     </tbody>
                 </table>
             </div>
@@ -130,79 +92,8 @@
                         <th>Examen</th>
                         <th>Moyenne</th>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th>Math</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>Physique</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>Science</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>Langue Arabe</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>Langue Française</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>Langue Anglaise</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>Science Islamique</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>Histo/Geo</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th>Sport</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="notes-body">
+                        
                     </tbody>
                 </table>
             </div>
@@ -222,6 +113,9 @@
                     </tbody>
                 </table>
             </div>
+            <?php 
+                if($_SESSION['type'] >= 1){
+            ?>
             <div id="remarques" class="col-sm-12">
                 <table class="table table-bordered">
                     <thead>
@@ -238,12 +132,16 @@
                     </tbody>
                 </table>
             </div>
+            <?php
+                }
+            ?>
         </div>
     </div>
     <?php
         require_once 'includes/footer.php'
     ?>
 </body>
-<script src="../js/jquery-3.5.1.js"></script>
-<script src="../js/eleve.js"></script>
+<?php 
+    require 'includes/eleve_script.php';
+?>
 </html>
