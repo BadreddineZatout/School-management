@@ -2,11 +2,11 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    session_start();
-    if(!isset($_SESSION['username'])){
-        header('location:/?action=eleve_login');
-    }
-    session_unset();
+    // session_start();
+    // if(!isset($_SESSION['username'])){
+    //     header('location:/?action=eleve_login');
+    // }
+    // session_unset();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,14 +37,14 @@
         <div class="col-sm-9 row">
             <div class="col-sm-12 navbar navbar-expand-sm">
                 <ul id="switch" class="navbar-nav ml-auto">
-                    <li class="nav-item"><button class="btn">Emploie du Temps</button></li>
-                    <li class="nav-item"><button class="btn">Notes</button></li>
-                    <li class="nav-item"><button class="btn">Activités Extrascolaire</button></li>
-                    <li class="nav-item"><button class="btn">Remarques des Enseignants</button></li>
+                    <li class="nav-item"><button id="edt-btn" class="btn">Emploie du Temps</button></li>
+                    <li class="nav-item"><button id="note-btn" class="btn">Notes</button></li>
+                    <li class="nav-item"><button id="activ-btn" class="btn">Activités Extrascolaire</button></li>
+                    <li class="nav-item"><button id="rque-btn" class="btn">Remarques des Enseignants</button></li>
                 </ul>
             </div>
-            <div class="col-sm-12">
-                <table id="edt" class="table table-bordered">
+            <div id="edt" class="col-sm-12">
+                <table class="table table-bordered">
                     <thead>
                         <th></th>
                         <th>Dimanche</th>
@@ -121,8 +121,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-sm-12">
-                <table id="notes" class="table table-bordered">
+            <div id="notes" class="col-sm-12">
+                <table class="table table-bordered">
                     <thead>
                         <th></th>
                         <th>Evaluaion</th>
@@ -207,8 +207,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-sm-12">
-                <table id="activites" class="table table-bordered">
+            <div id="activites" class="col-sm-12">
+                <table class="table table-bordered">
                     <thead>
                         <th>Activité</th>
                         <th>Date</th>
@@ -223,8 +223,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-sm-12">
-                <table id="remarques" class="table table-bordered">
+            <div id="remarques" class="col-sm-12">
+                <table class="table table-bordered">
                     <thead>
                         <th>Enseignant</th>
                         <th>Matiere</th>
@@ -245,4 +245,6 @@
         require_once 'includes/footer.php'
     ?>
 </body>
+<script src="../js/jquery-3.5.1.js"></script>
+<script src="../js/eleve.js"></script>
 </html>
