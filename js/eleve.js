@@ -13,6 +13,7 @@ $('#note-btn').click(function () {
     $('#activites').hide();
     $('#remarques').hide();
     $('#edt').hide();
+    Notes();
     $('#notes').show();
 });
 $('#activ-btn').click(function () { 
