@@ -2,10 +2,9 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    // session_start();
-    // if(!isset($_SESSION['username'])){
-    //     header('location:/?action=eleve_login');
-    // }
+    if(!isset($_SESSION['username'])){
+        header('location:/?action=eleve_login');
+    }
     // session_unset();
 ?>
 <!DOCTYPE html>
@@ -26,12 +25,12 @@
     <div class="row mx-auto">
         <div class="col-sm-3 align-self-start ml-2 info">
             <ul class="list-group">
-                <li class="list-group-item">ID: 17/0083</li>
-                <li class="list-group-item">Nom: Zatout</li>
-                <li class="list-group-item">Prenom: Badreddine</li>
-                <li class="list-group-item">Date de Naissance: 14/05/1999</li>
-                <li class="list-group-item">Année Scolaire: 2020/2021</li>
-                <li class="list-group-item">Classe: 2CS SIL1</li>
+                <li class="list-group-item">ID: <?= $eleve['id'] ?></li>
+                <li class="list-group-item">Nom: <?= $eleve['nom'] ?></li>
+                <li class="list-group-item">Prenom: <?= $eleve['prenom'] ?></li>
+                <li class="list-group-item">Date de Naissance: <?= $eleve['date_naissance'] ?></li>
+                <li class="list-group-item">Année Scolaire: <?= $eleve['annee'] ?></li>
+                <li class="list-group-item">Classe: <?= $eleve['classe'] ?></li>
             </ul>
         </div>
         <div class="col-sm-9 row">

@@ -42,6 +42,7 @@
                 if ( $valid[0] ){
                     session_start();
                     $_SESSION['username'] = $_POST['user'];
+                    $_SESSION['id'] = $valid[1]['id'];
                     $_SESSION['type'] = $valid[1]['type'];
                     
                     header($this->redirectUser($valid[1]['type']));
