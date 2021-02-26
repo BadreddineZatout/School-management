@@ -2,10 +2,12 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
+    if(!isset($_GET['enfant']) && $_SESSION['type'] > 0){
+        header('location:/?action=eleve_login');
+    }
     if(!isset($_SESSION['username'])){
         header('location:/?action=eleve_login');
     }
-    // session_unset();
 ?>
 <!DOCTYPE html>
 <html lang="en">

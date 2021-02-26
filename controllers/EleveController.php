@@ -11,8 +11,13 @@ class EleveController{
     }
     function eleve_page()
     {
-        $eleve = $this->getInfo($_SESSION['id']);
-        $edt_rows = $this->getEDT($eleve['class_id']);
+        if($_SESSION['type'] > 0){
+            $eleve = $this->getInfo($_GET['enfant']);
+            $edt_rows = $this->getEDT($eleve['class_id']);
+        }else{
+            $eleve = $this->getInfo($_SESSION['id']);
+            $edt_rows = $this->getEDT($eleve['class_id']);
+        }
         require_once 'views/eleve.php';
     }
     public function getInfo($user_id)

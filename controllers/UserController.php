@@ -19,16 +19,12 @@ class UserController{
     public function redirectUser($type){
         if ($type == 2){
             $_SESSION['eleve_id'] = NULL;
-            $_SESSION['parent_id'] = NULL;
             return 'location:/?action=admin';
         }
         else if($type == 1){
             $_SESSION['eleve_id'] = NULL;
-            $_SESSION['admin_id'] = NULL;
             return 'location:/?action=parent';
         }else{
-            $_SESSION['admin_id'] = NULL;
-            $_SESSION['parent_id'] = NULL;
             return 'location:/?action=eleve';
         }
     }

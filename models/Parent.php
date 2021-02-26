@@ -11,7 +11,7 @@ class Tuteur extends Model{
     }
     public function getEnfant($parent)
     {
-        $query = $this->db->prepare('SELECT eleves.nom, eleves.prenom FROM (eleves JOIN parent_eleve AS pe ON pe.enfant = eleves.id)  WHERE pe.parent = ?');
+        $query = $this->db->prepare('SELECT eleves.user_id, eleves.nom, eleves.prenom FROM (eleves JOIN parent_eleve AS pe ON pe.enfant = eleves.id)  WHERE pe.parent = ?');
         $query->execute([$parent]);
         $enfants = $query->fetchall();
         return $enfants;

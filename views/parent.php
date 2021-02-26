@@ -2,9 +2,10 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    if(!isset($_SESSION['username'])|| $_SESSION['type']<1){
+    if(!isset($_SESSION['username']) || $_SESSION['type']<1){
         header('location:/?action=parent_login');
     }
+    // session_unset();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,7 @@
         require_once 'includes/menu.php';
     ?>
     <div class="row mx-auto">
-        <div class="col-sm-3 ml-2 info">
+        <div class="col-sm-3 ml-2 info" style="margin-bottom: 95px;">
             <ul class="list-group">
             <li class="list-group-item">ID: <?= $parent['id'] ?></li>
                 <li class="list-group-item">Nom: <?= $parent['nom'] ?></li>
@@ -38,7 +39,7 @@
                 <?php
                     foreach ($enfants as $enfant) {
                         ?>
-                    <li class="list-group-item"><a href="/?action=eleve"><?= $enfant['nom'] .' '. $enfant['prenom'] ?></a></li>
+                    <li class="list-group-item"><a href="/?action=eleve&enfant=<?= $enfant['user_id'] ?>"><?= $enfant['nom'] .' '. $enfant['prenom'] ?></a></li>
                 <?php
                     } ?>
                 </ul>
