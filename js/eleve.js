@@ -27,5 +27,6 @@ $('#rque-btn').click(function () {
     $('#notes').hide();
     $('#activites').hide();
     $('#edt').hide();
+    Remarques();
     $('#remarques').show();
 });

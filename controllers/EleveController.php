@@ -38,4 +38,9 @@ class EleveController{
     {
         return json_encode($this->eleve->getActivites($_SESSION['eleve_id']));
     }
+    public function getRemarques()
+    {
+        $id =  $this->eleve->getID($_SESSION['enfant'])['id'];
+        return json_encode($this->eleve->getRemarques($id));
+    }
 }

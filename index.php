@@ -86,15 +86,6 @@ if (!isset($_GET['action'])){
             $ac = new AcceuilController();
             $ac->article_page();
             break;
-        case 'notes':
-            require_once ('./controllers/EleveController.php');
-            $ec = new EleveController();
-            echo ($ec->getNotes());
-            break;
-        case 'activites':
-            require_once ('./controllers/EleveController.php');
-            $ec = new EleveController();
-            echo ($ec->getActivites());
-            break;
     }
+require 'includes/ajax-requests.php';
 }

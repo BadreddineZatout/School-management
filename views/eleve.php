@@ -5,6 +5,9 @@
     if(!isset($_GET['enfant']) && $_SESSION['type'] > 0){
         header('location:/?action=eleve_login');
     }
+    if(isset($_GET['enfant'])){
+        $_SESSION['enfant'] = $_GET['enfant'];
+    }
     if(!isset($_SESSION['username'])){
         header('location:/?action=eleve_login');
     }
@@ -121,12 +124,7 @@
                         <th>Matiere</th>
                         <th>Remarque</th>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="rques-body">
                     </tbody>
                 </table>
             </div>

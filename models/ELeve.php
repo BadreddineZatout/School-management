@@ -3,6 +3,7 @@ require_once 'models/EDT.php';
 require_once 'models/Model.php';
 require_once 'models/Note.php';
 require_once 'models/Activite.php';
+require_once 'models/Remarque.php';
 class Eleve extends Model{
 
     public function getInfo($user){
@@ -25,5 +26,17 @@ class Eleve extends Model{
     {
         $activites = new Activite();
         return $activites->getEleveActivites($eleve_id);
+    }
+    public function getRemarques($eleve_id)
+    {
+        $rque = new Remarque();
+        return $rque->getEleveRque($eleve_id);
+    }
+    public function getID($user)
+    {
+        $query = $this->db->prepare("SELECT id FROM eleves WHERE user_id = ? ");
+        $query->execute([$user]);
+        $row = $query->fetch(PDO::FETCH_ASSOC);
+        return $row;
     }
 }
