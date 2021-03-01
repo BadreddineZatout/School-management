@@ -2,11 +2,9 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    session_start();
     if(!isset($_SESSION['username']) || $_SESSION['type']<2){
         header('location:/?action=admin_login');
     }
-    session_unset();
 ?>
 <!DOCTYPE html>
 <html lang="en">

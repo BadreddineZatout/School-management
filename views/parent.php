@@ -2,7 +2,7 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    if(!isset($_SESSION['username']) || $_SESSION['type']<1){
+    if(!isset($_SESSION['username']) || $_SESSION['type']!=1){
         header('location:/?action=parent_login');
     }
     // session_unset();
