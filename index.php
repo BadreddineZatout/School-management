@@ -88,4 +88,5 @@ if (!isset($_GET['action'])){
             break;
     }
 require 'includes/ajax-requests.php';
+require 'includes/admin.php';
 }
