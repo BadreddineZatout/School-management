@@ -1,4 +1,5 @@
 <?php
+session_unset();
     if(!isset($_GET['action'])){
         header('location:/');
     }
