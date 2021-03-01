@@ -27,7 +27,7 @@
         <div class="card-body">
             <h4 class="card-title">Les Articles</h4>
             <p class="card-text">Gerer les articles de l'ecole</p>
-            <a class="btn" href="/?action=edt&cycle=<?= $cycle ?>">Aller au page</a>
+            <a class="btn" href="/?action=admin-article">Aller au page</a>
         </div>
     </div>
     <div class="card">
@@ -35,7 +35,7 @@
         <div class="card-body">
             <h4 class="card-title">Presentaion de l'Ecole</h4>
             <p class="card-text">Gerer le contenu de la presentation de l'ecole</p>
-            <a class="btn" href="/?action=ens&cycle=<?= $cycle ?>">Aller au page</a>
+            <a class="btn" href="/?action=admin-ppt">Aller au page</a>
         </div>
     </div>
     <div class="card">
@@ -43,7 +43,7 @@
         <div class="card-body">
             <h4 class="card-title">Emploi de temps</h4>
             <p class="card-text">Gerer l'emploi du temps de chaque cycle</p>
-            <a class="btn" href="/?action=info-pratique&cycle=<?= $cycle ?>">Aller au page</a>
+            <a class="btn" href="/?action=admin-edt">Aller au page</a>
         </div>
     </div>
     <div class="card">
@@ -51,7 +51,7 @@
         <div class="card-body">
             <h4 class="card-title">Les Enseignants</h4>
             <p class="card-text">Geres les enseignants de chaque cycle</p>
-            <a class="btn" href="/?action=restau&cycle=<?= $cycle ?>">Aller au page</a>
+            <a class="btn" href="/?action=admin-ens">Aller au page</a>
         </div>
     </div>
 </div>
@@ -61,7 +61,7 @@
         <div class="card-body">
             <h4 class="card-title">Les Utilisateurs</h4>
             <p class="card-text">Geres les enseignants de site</p>
-            <a class="btn" href="/?action=edt&cycle=<?= $cycle ?>">Aller au page</a>
+            <a class="btn" href="/?action=admin-user">Aller au page</a>
         </div>
     </div>
     <div class="card">
@@ -69,7 +69,7 @@
         <div class="card-body">
             <h4 class="card-title">Restauration</h4>
             <p class="card-text">Gerer le planning de Restauration de chaque cycle</p>
-            <a class="btn" href="/?action=restau&cycle=<?= $cycle ?>">Aller au page</a>
+            <a class="btn" href="/?action=admin-restau">Aller au page</a>
         </div>
     </div>
     <div class="card">
@@ -77,7 +77,7 @@
         <div class="card-body">
             <h4 class="card-title">Contact</h4>
             <p class="card-text">Gerer les information dans la page du contact</p>
-            <a class="btn" href="/?action=ens&cycle=<?= $cycle ?>">Aller au page</a>
+            <a class="btn" href="/?action=admin-contact">Aller au page</a>
         </div>
     </div>
     <div class="card">
@@ -85,7 +85,7 @@
         <div class="card-body">
             <h4 class="card-title">Parametres</h4>
             <p class="card-text">Gerer les parametres de site</p>
-            <a class="btn" href="/?action=info-pratique&cycle=<?= $cycle ?>">Aller au page</a>
+            <a class="btn" href="/?action=admin-param">Aller au page</a>
         </div>
     </div>
     
