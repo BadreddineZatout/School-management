@@ -1,19 +1,21 @@
 <?php
-session_unset();
+// session_unset();
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    if(isset($_SESSION['username'])){
-        switch ($_SESSION['type']){
-            case 0:
-                header('location:/?action=eleve');
-                break;
-            case 1: 
-                header('location:/?action=parent');
-            case 2: 
-                header('location:/?action=admin');
-        }
-    }
+    // if(isset($_SESSION['username'])){
+    //     switch ($_SESSION['type']){
+    //         case 0:
+    //             header('location:/?action=eleve');
+    //             break;
+    //         case 1: 
+    //             header('location:/?action=parent');
+    //             break;
+    //         case 2: 
+    //             header('location:/?action=admin');
+    //             break;
+    //     }
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
