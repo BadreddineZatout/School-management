@@ -7,3 +7,20 @@
     color: white;
     background-color: #E27802;
 }
+.modal button.cancel{
+    color: white;
+    background-color: #F88F01;
+}
+.modal button.cancel:hover{
+    background-color: #E27802;
+}
+.modal button.submit{
+    color: white;
+    background-color: #6A492B;
+}
+.modal button.submit:hover{
+    background-color: #58391C;
+}
+div#DeleteModal{
+    margin-top: 10%;
+}

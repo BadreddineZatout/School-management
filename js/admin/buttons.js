@@ -3,6 +3,8 @@ function update_btn(){
     update.addClass('btn');
     update.css('background-color', '#E27802');
     update.css('color', 'white');
+    update.attr('data-toggle', 'modal');
+    update.attr('data-target', '#UpdateModal');
     // update.attr('onclick', '');
     return update;
 }
@@ -12,6 +14,7 @@ function delete_btn(){
     del.addClass('btn');
     del.css('background-color', '#E27802');
     del.css('color', 'white');
-
+    del.attr('data-toggle', 'modal');
+    del.attr('data-target', '#DeleteModal');
     return del;
 }
