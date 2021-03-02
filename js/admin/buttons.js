@@ -3,7 +3,7 @@ function update_btn(){
     update.addClass('btn');
     update.css('background-color', '#E27802');
     update.css('color', 'white');
-
+    // update.attr('onclick', '');
     return update;
 }
 
