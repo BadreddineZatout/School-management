@@ -43,7 +43,10 @@ class ArticlesController{
     }
     public function store()
     {
-
+        $target = 'data/images/'.basename($_FILES['image_add']['name']);
+        move_uploaded_file($_FILES['image_add']['tmp_name'], $target);
+        $this->article->store();
+        header('location:/?action=admin-article');
     }
     public function update()
     {
@@ -51,7 +54,7 @@ class ArticlesController{
     }
     public function delete()
     {
-        
+
     }
 
 }

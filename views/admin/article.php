@@ -49,19 +49,19 @@
           </div>
 
           <!-- Modal body -->
-        <form action="/?action=storeArticle" method="post">
+        <form action="/?action=storeArticle" method="POST" enctype="multipart/form-data">
           <div class="modal-body">
                 <div class="form-group">
                   <label for="titre">Titre:</label>
-                  <input type="titre" class="form-control" placeholder="Introduire Titre" id="titre" name="titre">
+                  <input type="titre" class="form-control" placeholder="Introduire Titre" id="titre" name="titre" required>
                 </div>
                 <div class="form-group">
                   <label for="contenu">Contenu:</label>
-                  <textarea class="form-control" name="contenu" id="contenu" placeholder="Introduire Contenu" rows=""></textarea>
+                  <textarea class="form-control" name="contenu" id="contenu" placeholder="Introduire Contenu" required></textarea>
                 </div>
                 <div class="form-group">
                   <label for="img">Image:</label>
-                  <input type="file" class="form-control" name="image" id="img">
+                  <input type="file" class="form-control" name="image_add" id="img" required>
                 </div>
             </div>
             
@@ -87,19 +87,19 @@
           </div>
 
           <!-- Modal body -->
-        <form action="/?action=storeArticle" method="post">
+        <form action="/?action=updateArticle" method="post">
           <div class="modal-body">
                 <div class="form-group">
                   <label for="titre">Titre:</label>
-                  <input type="titre" class="form-control" placeholder="Introduire Titre" id="titre" name="titre">
+                  <input type="titre" class="form-control" placeholder="Introduire Titre" id="titre" name="titre" required>
                 </div>
                 <div class="form-group">
                   <label for="contenu">Contenu:</label>
-                  <textarea class="form-control" name="contenu" id="contenu" placeholder="Introduire Contenu" rows=""></textarea>
+                  <textarea class="form-control" name="contenu" id="contenu" placeholder="Introduire Contenu" required></textarea>
                 </div>
                 <div class="form-group">
                   <label for="img">Image:</label>
-                  <input type="file" class="form-control" name="image" id="img">
+                  <input type="file" class="form-control" name="image_maj" id="img" required>
                 </div>
             </div>
             
@@ -128,7 +128,9 @@
               <h5>Voulez vouz vraiment supprimer ce article?</h5>
               <div class="mt-5 d-flex flex-row-reverse">
                   <button type="button" class="btn cancel" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn mr-3 submit">Submit</button>
+                  <form action="/?action=deleteArticle" method="post">
+                      <button type="submit" class="btn mr-3 submit">Submit</button>
+                    </form>
               </div>
             </div>
             

@@ -30,9 +30,22 @@ class Article extends Model{
     }
     public function getAll()
     {
-        $query = $this->db->prepare("SELECT * FROM articles");
+        $query = $this->db->prepare("SELECT * FROM articles ORDER BY id DESC");
         $query->execute();
         $rows = $query->fetchAll();
         return $rows;
+    }
+    public function store()
+    {
+        $query = $this->db->prepare("INSERT INTO articles (titre, contenu, image) VALUES (?, ?, ?)");
+        $query->execute([$_POST['titre'], $_POST['contenu'], 'data/images/'.$_FILES['image_add']['name']]);
+    }
+    public function update()
+    {
+
+    }
+    public function delete()
+    {
+
     }
 }
