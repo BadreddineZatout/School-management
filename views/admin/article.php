@@ -148,9 +148,9 @@
               <h5>Voulez vouz vraiment supprimer ce article?</h5>
               <div class="mt-5 d-flex flex-row-reverse">
                   <button type="button" class="btn cancel" data-dismiss="modal">Close</button>
-                  <form action="/?action=deleteArticle" method="post">
-                      <button type="submit" class="btn mr-3 submit">Submit</button>
-                    </form>
+                  <!-- <form action="/?action=deleteArticle" method="post"> -->
+                      <button type="submit" id="supp" onclick="supp" data-dismiss="modal" class="btn mr-3 submit">Submit</button>
+                  <!-- </form> -->
               </div>
             </div>
             

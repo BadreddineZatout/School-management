@@ -54,7 +54,7 @@ class ArticlesController{
     }
     public function delete()
     {
-
+        $this->article->delete($_GET['id']);
     }
 
 }

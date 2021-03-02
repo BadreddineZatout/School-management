@@ -1,5 +1,6 @@
 var articles;
-$('document').ready(function(){
+$('document').ready(get());
+function get(){
     $.ajax({
         type: "GET",
         url: "/?action=getArticle",
@@ -8,8 +9,7 @@ $('document').ready(function(){
             buildArticles(articles);
         }
     });
-});
-
+}
 function buildArticles(rows){
     $('#article-body').html('');
     for (let row of rows) {
@@ -23,9 +23,9 @@ function buildArticles(rows){
         let image = $('<td></td>');
         image.append(img);
         let maj = $('<td></td>');
-        maj.append(update_btn());
+        maj.append(update_btn(row.id));
         let supp = $('<td></td>');
-        supp.append(delete_btn());
+        supp.append(delete_btn(row.id));
         tr.append(titre);
         tr.append(contenu);
         tr.append(image);
@@ -35,6 +35,18 @@ function buildArticles(rows){
     }
 }
 
-function prepare(){
-    
+function prepare(id){
+
+}
+function prepare_supp(id){
+    $('#supp').attr('onclick', 'supp('+id+')');
+}
+function supp(id){
+    $.ajax({
+        type: "DELETE",
+        url: "/?action=deleteArticle&id="+id,
+        success: function (response) {
+            get();
+        }
+    });
 }

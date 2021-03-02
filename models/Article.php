@@ -56,8 +56,11 @@ class Article extends Model{
     {
 
     }
-    public function delete()
+    public function delete($id)
     {
-
+        $query = $this->db->prepare("DELETE FROM articles_cycles WHERE article_id=?");
+        $query->execute([$id]);
+        $query = $this->db->prepare("DELETE FROM articles WHERE id=?");
+        $query->execute([$id]);
     }
 }
