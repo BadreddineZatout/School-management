@@ -43,5 +43,6 @@
     ?>
 </body>
 <script src="js/jquery-3.5.1.js"></script>
+<script src="js/admin/buttons.js"></script>
 <script src="js/admin/article.js"></script>
 </html>
