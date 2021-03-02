@@ -1,0 +1,9 @@
+.head{
+    background-color: #F88F01;
+    color: white;
+    border-radius: 10px;
+}
+.head button{
+    color: white;
+    background-color: #E27802;
+}

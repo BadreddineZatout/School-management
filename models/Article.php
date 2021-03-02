@@ -28,4 +28,11 @@ class Article extends Model{
         $sql = 'SELECT * FROM articles JOIN articles_cycles AS ac ON ac.article_id=articles.id WHERE ac.cycle_id=3 ORDER BY articles.id DESC LIMIT 8';
         return $this->db->query($sql);
     }
+    public function getAll()
+    {
+        $query = $this->db->prepare("SELECT * FROM articles");
+        $query->execute();
+        $rows = $query->fetchAll();
+        return $rows;
+    }
 }

@@ -37,5 +37,9 @@ class ArticlesController{
         $a[1] = array_slice($tmp, 4, 4);
         return $a;
     }
+    public function getAll()
+    {
+        return json_encode($this->article->getAll());
+    }
 
 }
