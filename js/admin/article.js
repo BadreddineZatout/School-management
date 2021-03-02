@@ -1,9 +1,11 @@
+var articles;
 $('document').ready(function(){
     $.ajax({
         type: "GET",
         url: "/?action=getArticle",
         success: function (response) {
-            buildArticles(JSON.parse(response));
+            articles = JSON.parse(response);
+            buildArticles(articles);
         }
     });
 });
@@ -31,4 +33,8 @@ function buildArticles(rows){
         tr.append(supp);
         $('#article-body').append(tr);
     }
+}
+
+function prepare(){
+    
 }

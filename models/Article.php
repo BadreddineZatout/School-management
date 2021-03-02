@@ -39,6 +39,18 @@ class Article extends Model{
     {
         $query = $this->db->prepare("INSERT INTO articles (titre, contenu, image) VALUES (?, ?, ?)");
         $query->execute([$_POST['titre'], $_POST['contenu'], 'data/images/'.$_FILES['image_add']['name']]);
+        $query = $this->db->prepare("SELECT max(id) FROM articles");
+        $query->execute();
+        $id = $query->fetch(PDO::FETCH_ASSOC);
+        if($_POST['concern']>0){
+            $query = $this->db->prepare("INSERT INTO articles_cycles (article_id, cycle_id) VALUES (?, ?)");
+            $query->execute([$id['max(id)'], $_POST['concern']]);
+        }else{
+            for ($i=1; $i<=3;$i++){
+                $query = $this->db->prepare("INSERT INTO articles_cycles (article_id, cycle_id) VALUES (?, ?)");
+                $query->execute([$id['max(id)'],$i]);
+            }
+        }
     }
     public function update()
     {

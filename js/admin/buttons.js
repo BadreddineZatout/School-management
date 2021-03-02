@@ -5,7 +5,7 @@ function update_btn(){
     update.css('color', 'white');
     update.attr('data-toggle', 'modal');
     update.attr('data-target', '#UpdateModal');
-    // update.attr('onclick', '');
+    update.attr('onclick', 'prepare()');
     return update;
 }
 

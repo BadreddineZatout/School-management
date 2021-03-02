@@ -59,6 +59,26 @@
                   <label for="contenu">Contenu:</label>
                   <textarea class="form-control" name="contenu" id="contenu" placeholder="Introduire Contenu" required></textarea>
                 </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="0" name="concern">Tous
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="1" name="concern">Cycle Primaire
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="2" name="concern">Cycle Moyenne
+                  </label>
+                </div> 
+                <div class="form-check disabled">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="3" name="concern">Cycle Secondaire
+                  </label>
+                </div> 
                 <div class="form-group">
                   <label for="img">Image:</label>
                   <input type="file" class="form-control" name="image_add" id="img" required>
