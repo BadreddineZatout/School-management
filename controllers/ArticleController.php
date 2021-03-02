@@ -41,5 +41,17 @@ class ArticlesController{
     {
         return json_encode($this->article->getAll());
     }
+    public function store()
+    {
+
+    }
+    public function update()
+    {
+
+    }
+    public function delete()
+    {
+        
+    }
 
 }
