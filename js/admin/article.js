@@ -23,7 +23,7 @@ function buildArticles(rows){
         let image = $('<td></td>');
         image.append(img);
         let maj = $('<td></td>');
-        maj.append(update_btn(row.titre, row.contenu));
+        maj.append(update_btn(row.id, row.titre, row.contenu));
         let supp = $('<td></td>');
         supp.append(delete_btn(row.id));
         tr.append(titre);
@@ -35,9 +35,10 @@ function buildArticles(rows){
     }
 }
 
-function prepare(titre, contenu){
+function prepare(id, titre, contenu){
     $('#titreMAJ').attr('value', titre);
     $('#contenuMAJ').text(contenu);
+    $('#id').attr('value', id);
 }
 function prepare_supp(id){
     $('#supp').attr('onclick', 'supp('+id+')');

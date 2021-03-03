@@ -50,7 +50,8 @@ class ArticlesController{
     }
     public function update()
     {
-
+        $this->article->update();
+        header('location:/?action=admin-article');
     }
     public function delete()
     {

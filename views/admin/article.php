@@ -116,6 +116,7 @@
                 <div class="form-group">
                   <label for="contenu">Contenu:</label>
                   <textarea class="form-control" name="contenuMAJ" id="contenuMAJ" required></textarea>
+                  <input type="hidden" name="id" id="id">
                 </div>
                 <!-- <div class="form-check">
                   <label class="form-check-label">
@@ -145,7 +146,7 @@
             
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="submit" class="btn submit">Submit</button>
+                <button type="submit" class="btn submit" id="modif">Submit</button>
                 <button type="button" class="btn cancel" data-dismiss="modal">Close</button>
             </div>
         </form>

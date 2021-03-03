@@ -54,7 +54,8 @@ class Article extends Model{
     }
     public function update()
     {
-
+        $query = $this->db->prepare("UPDATE articles SET titre=?, contenu=? WHERE id=?");
+        $query->execute([$_POST['titreMAJ'], $_POST['contenuMAJ'], $_POST['id']]);
     }
     public function delete($id)
     {
