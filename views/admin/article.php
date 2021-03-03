@@ -111,16 +111,36 @@
           <div class="modal-body">
                 <div class="form-group">
                   <label for="titre">Titre:</label>
-                  <input type="titre" class="form-control" placeholder="Introduire Titre" id="titre" name="titre" required>
+                  <input type="titre" class="form-control" id="titreMAJ" name="titreMAJ" required>
                 </div>
                 <div class="form-group">
                   <label for="contenu">Contenu:</label>
-                  <textarea class="form-control" name="contenu" id="contenu" placeholder="Introduire Contenu" required></textarea>
+                  <textarea class="form-control" name="contenuMAJ" id="contenuMAJ" required></textarea>
                 </div>
+                <!-- <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="0" name="concernMAJ">Tous
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="1" name="concernMAJ">Cycle Primaire
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="2" name="concernMAJ">Cycle Moyenne
+                  </label>
+                </div> 
+                <div class="form-check disabled">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="3" name="concernMAJ">Cycle Secondaire
+                  </label>
+                </div> 
                 <div class="form-group">
                   <label for="img">Image:</label>
-                  <input type="file" class="form-control" name="image_maj" id="img" required>
-                </div>
+                  <input type="file" class="form-control" name="image_maj" id="image_maj" >
+                </div> -->
             </div>
             
             <!-- Modal footer -->
@@ -148,9 +168,7 @@
               <h5>Voulez vouz vraiment supprimer ce article?</h5>
               <div class="mt-5 d-flex flex-row-reverse">
                   <button type="button" class="btn cancel" data-dismiss="modal">Close</button>
-                  <!-- <form action="/?action=deleteArticle" method="post"> -->
-                      <button type="submit" id="supp" onclick="supp" data-dismiss="modal" class="btn mr-3 submit">Submit</button>
-                  <!-- </form> -->
+                  <button type="submit" id="supp" data-dismiss="modal" class="btn mr-3 submit">Submit</button>
               </div>
             </div>
             

@@ -1,11 +1,14 @@
-function update_btn(id){
+function update_btn(titre, contenu){
+    let fun = "prepare("+titre+")";
     let update = $('<button></button>').text('Modifier');
     update.addClass('btn');
     update.css('background-color', '#E27802');
     update.css('color', 'white');
     update.attr('data-toggle', 'modal');
     update.attr('data-target', '#UpdateModal');
-    update.attr('onclick', 'prepare('+id+')');
+    update.bind("click", function(){
+        prepare(titre, contenu);
+    });
     return update;
 }
 
