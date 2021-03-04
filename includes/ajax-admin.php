@@ -40,4 +40,24 @@ switch ($_GET['action']) {
         $ec = new EcoleController();
         $ec->delete();
         break;
+    case 'getedt':
+        require_once('./controllers/EDTController.php');
+        $ec = new EDTController();
+        echo($ec->getAll());
+        break;
+    case 'storeedt': 
+        require_once('./controllers/EDTController.php');
+        $ec = new EDTController();
+        $ec->store();
+        break;
+    case 'updateedt': 
+        require_once('./controllers/EDTController.php');
+        $ec = new EDTController();
+        $ec->update();
+        break;
+    case 'deleteedt': 
+        require_once('./controllers/EDTController.php');
+        $ec = new EDTController();
+        $ec->delete();
+        break;
     }

@@ -24,6 +24,7 @@
         </span>
         <span class="my-auto">
             <button class="btn b" data-toggle="modal" data-target="#AddModal">Ajouter un article</button>
+            <button class="btn b"><a class="retour" href="/?action=admin">Retour</a></button>
         </span>
     </div>
     <div class="mx-5">
