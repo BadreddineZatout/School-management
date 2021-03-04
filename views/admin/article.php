@@ -32,8 +32,8 @@
                 <th>Titre</th>
                 <th>Contenu</th>
                 <th>Image</th>
-                <th>Modifier</th>
-                <th>Supprimer</th>
+                <th></th>
+                <th></th>
             </thead>
             <tbody id="article-body"></tbody>
         </table>
