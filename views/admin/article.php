@@ -177,11 +177,11 @@
       </div>
     </div>
     <?php
-        require_once 'includes/footer.php'
+        require_once 'includes/footer.php';
     ?>
 </body>
-<script src="js/jquery-3.5.1.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/admin/buttons.js"></script>
+<?php
+        require_once 'includes/admin-script.php';
+    ?>
 <script src="js/admin/article.js"></script>
 </html>

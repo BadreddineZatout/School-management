@@ -1,16 +1,16 @@
-var articles;
+var infos;
 $('document').ready(get());
 function get(){
     $.ajax({
         type: "GET",
-        url: "/?action=getArticle",
+        url: "/?action=getInfo",
         success: function (response) {
-            articles = JSON.parse(response);
-            buildArticles(articles);
+            infos = JSON.parse(response);
+            buildInfos(infos);
         }
     });
 }
-function update_btn(id, titre, contenu){
+function update_btn(id, paragraphe){
     let update = $('<button></button>').text('Modifier');
     update.addClass('btn');
     update.css('background-color', '#E27802');
@@ -18,7 +18,7 @@ function update_btn(id, titre, contenu){
     update.attr('data-toggle', 'modal');
     update.attr('data-target', '#UpdateModal');
     update.bind("click", function(){
-        prepare(id, titre, contenu);
+        prepare(id, paragraphe);
     });
     return update;
 }
@@ -33,34 +33,32 @@ function delete_btn(id){
     del.attr('onclick', 'prepare_supp('+id+')');
     return del;
 }
-function buildArticles(rows){
-    $('#article-body').html('');
+function buildInfos(rows){
+    $('#ppt-body').html('');
     for (let row of rows) {
         let tr = $('<tr></tr>');
-        let titre = $('<td></td>').text(row.titre);
-        let contenu = $('<td></td>').text(row.contenu);
+        let paragraphe = $('<td></td>').text(row.paragraphe);
         let img = $('<img>');
         img.attr('src', row.image);
         img.attr('height', '300px');
         img.attr('width', '300px');
+        img.attr('alt', 'Aucune image');
         let image = $('<td></td>');
         image.append(img);
         let maj = $('<td></td>');
-        maj.append(update_btn(row.id, row.titre, row.contenu));
+        maj.append(update_btn(row.id, row.paragraphe));
         let supp = $('<td></td>');
         supp.append(delete_btn(row.id));
-        tr.append(titre);
-        tr.append(contenu);
+        tr.append(paragraphe);
         tr.append(image);
         tr.append(maj);
         tr.append(supp);
-        $('#article-body').append(tr);
+        $('#ppt-body').append(tr);
     }
 }
 
-function prepare(id, titre, contenu){
-    $('#titreMAJ').attr('value', titre);
-    $('#contenuMAJ').text(contenu);
+function prepare(id, paragraphe){
+    $('#contenuMAJ').attr('value', paragraphe);
     $('#id').attr('value', id);
 }
 function prepare_supp(id){
@@ -69,10 +67,9 @@ function prepare_supp(id){
 function supp(id){
     $.ajax({
         type: "DELETE",
-        url: "/?action=deleteArticle&id="+id,
+        url: "/?action=deleteInfo&id="+id,
         success: function (response) {
             get();
         }
     });
 }
-

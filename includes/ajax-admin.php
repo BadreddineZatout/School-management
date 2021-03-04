@@ -20,4 +20,24 @@ switch ($_GET['action']) {
         $ac = new ArticlesController();
         $ac->delete();
         break;
+    case 'getInfo':
+        require_once('./controllers/EcoleController.php');
+        $ec = new EcoleController();
+        echo($ec->getAll());
+        break;
+    case 'storeInfo': 
+        require_once('./controllers/EcoleController.php');
+        $ec = new EcoleController();
+        $ec->store();
+        break;
+    case 'updateInfo': 
+        require_once('./controllers/EcoleController.php');
+        $ec = new EcoleController();
+        $ec->update();
+        break;
+    case 'deleteInfo': 
+        require_once('./controllers/EcoleController.php');
+        $ec = new EcoleController();
+        $ec->delete();
+        break;
     }
