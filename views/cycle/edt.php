@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once 'includes/link.php' ?>
     <link rel="stylesheet" href="style/table.css">
-    <title>Emploie due temps</title>
+    <title>Emploie du temps</title>
 </head>
 <body>
     <?php 
