@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once 'includes/link.php' ?>
-    <link rel="stylesheet" href="style/admin/article.css">
+    <link rel="stylesheet" href="style/admin.css">
     <title>Gestion des articles</title>
 </head>
 <body>
