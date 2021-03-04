@@ -23,14 +23,18 @@ class EcoleController{
     }
     public function store()
     {
-
+        $target = 'data/images/'.basename($_FILES['image_add']['name']);
+        move_uploaded_file($_FILES['image_add']['tmp_name'], $target);
+        $this->ppt->store();
+        header('location:/?action=admin-ppt');
     }
     public function update()
     {
-
+        $this->ppt->update();
+        header('location:/?action=admin-ppt');
     }
     public function delete()
     {
-
+        $this->ppt->delete($_GET['id']);
     }
 }
