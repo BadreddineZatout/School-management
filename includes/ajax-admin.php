@@ -60,4 +60,84 @@ switch ($_GET['action']) {
         $ec = new EDTController();
         $ec->delete();
         break;
+    case 'getEns':
+        require_once('./controllers/EnsController.php');
+        $cc = new EnsController();
+        echo($cc->getAll());
+        break;
+    case 'storeEns': 
+        require_once('./controllers/EnsController.php');
+        $cc = new EnsController();
+        $cc->store();
+        break;
+    case 'updateEns': 
+        require_once('./controllers/EnsController.php');
+        $cc = new EnsController();
+        $cc->update();
+        break;
+    case 'deleteEns': 
+        require_once('./controllers/EnsController.php');
+        $cc = new EnsController();
+        $cc->delete();
+        break;
+    case 'getUser':
+        require_once('./controllers/UserController.php');
+        $cc = new UserController(2);
+        echo($cc->getAll());
+        break;
+    case 'storeUser': 
+        require_once('./controllers/UserController.php');
+        $cc = new UserController(2);
+        $cc->store();
+        break;
+    case 'updateUser': 
+        require_once('./controllers/UserController.php');
+        $cc = new UserController(2);
+        $cc->update();
+        break;
+    case 'deleteUser': 
+        require_once('./controllers/UserController.php');
+        $cc = new UserController(2);
+        $cc->delete();
+        break;
+    case 'getRestau':
+        require_once('./controllers/RestauController.php');
+        $cc = new RestauController();
+        echo($cc->getAll());
+        break;
+    case 'storeRestau': 
+        require_once('./controllers/RestauController.php');
+        $cc = new RestauController();
+        $cc->store();
+        break;
+    case 'updateRestau': 
+        require_once('./controllers/RestauController.php');
+        $cc = new RestauController();
+        $cc->update();
+        break;
+    case 'deleteRestau': 
+        require_once('./controllers/RestauController.php');
+        $cc = new RestauController();
+        $cc->delete();
+        break;
+    case 'getContact':
+        require_once('./controllers/ContactController.php');
+        $cc = new ContactController();
+        echo($cc->getAll());
+        break;
+    case 'storeContact': 
+        require_once('./controllers/ContactController.php');
+        $cc = new ContactController();
+        $cc->store();
+        break;
+    case 'updateContact': 
+        require_once('./controllers/ContactController.php');
+        $cc = new ContactController();
+        $cc->update();
+        break;
+    case 'deleteContact': 
+        require_once('./controllers/ContactController.php');
+        $cc = new ContactController();
+        $cc->delete();
+        break;
     }
