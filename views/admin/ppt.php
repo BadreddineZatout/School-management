@@ -84,12 +84,8 @@
         <form action="/?action=updateInfo" method="post">
           <div class="modal-body">
                 <div class="form-group">
-                  <label for="titre">Titre:</label>
-                  <input type="titre" class="form-control" id="titreMAJ" name="titreMAJ" required>
-                </div>
-                <div class="form-group">
-                  <label for="paragraphe">Contenu:</label>
-                  <textarea class="form-control" name="contenuMAJ" id="contenuMAJ" required></textarea>
+                  <label for="paragraphe">Paragraphe:</label>
+                  <textarea class="form-control" name="paraMAJ" id="paraMAJ" required></textarea>
                   <input type="hidden" name="id" id="id">
                 </div>
             </div>

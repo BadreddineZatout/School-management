@@ -22,7 +22,7 @@ class info_ecole extends Model{
     public function update()
     {
         $query = $this->db->prepare("UPDATE info_ecole SET paragraphe=?WHERE id=?");
-        $query->execute([$_POST['titreMAJ'], $_POST['id']]);
+        $query->execute([$_POST['paraMAJ'], $_POST['id']]);
     }
     public function delete($id)
     {

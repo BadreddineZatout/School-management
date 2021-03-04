@@ -58,7 +58,7 @@ function buildInfos(rows){
 }
 
 function prepare(id, paragraphe){
-    $('#contenuMAJ').attr('value', paragraphe);
+    $('#paraMAJ').text(paragraphe);
     $('#id').attr('value', id);
 }
 function prepare_supp(id){
