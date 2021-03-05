@@ -49,7 +49,7 @@
           </div>
 
           <!-- Modal body -->
-        <form action="/?action=storeContact" method="POST" enctype="multipart/form-data">
+        <form action="/?action=storeContact" method="POST">
           <div class="modal-body">
                 <div class="form-group">
                   <label for="adresse">Adresse:</label>
