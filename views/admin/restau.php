@@ -57,7 +57,7 @@
                   <select class="form-control" id="cycle" name="cycle">
                     <option value="1">Primaire</option>
                     <option value="2">Moyenne</option>
-                    <option value="2">Secondaire</option>
+                    <option value="3">Secondaire</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -99,9 +99,27 @@
           <!-- Modal body -->
         <form action="/?action=updateRestau" method="post">
           <div class="modal-body">
+          <div class="form-group">
+                  <label for="cycleMAJ">Cycle:</label>
+                  <select class="form-control" id="cycleMAJ" name="cycleMAJ">
+                    <option value="1">Primaire</option>
+                    <option value="2">Moyenne</option>
+                    <option value="3">Secondaire</option>
+                  </select>
+                </div>
                 <div class="form-group">
-                  <label for="paragraphe">Paragraphe:</label>
-                  <textarea class="form-control" name="paraMAJ" id="paraMAJ" required></textarea>
+                  <label for="jourMAJ">Jour:</label>
+                  <select class="form-control" id="jourMAJ" name="jourMAJ">
+                    <option value="Dimanche">Dimanche</option>
+                    <option value="Lundi">Lundi</option>
+                    <option value="Mardi">Mardi</option>
+                    <option value="Mercredi">Mercredi</option>
+                    <option value="Jeudi">Jeudi</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="repasMAJ">Repas:</label>
+                  <input type="text" class="form-control" id="repasMAJ" name="repasMAJ" required>
                   <input type="hidden" name="id" id="id">
                 </div>
             </div>

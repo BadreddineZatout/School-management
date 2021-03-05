@@ -6,7 +6,7 @@ function get(){
         url: "/?action=getRestau",
         success: function (response) {
             restau = JSON.parse(response);
-            buildInfos(restau);
+            buildMenu(restau);
         }
     });
 }
@@ -33,7 +33,7 @@ function delete_btn(id){
     del.attr('onclick', 'prepare_supp('+id+')');
     return del;
 }
-function buildInfos(rows){
+function buildMenu(rows){
     $('#restau-body').html('');
     for (let row of rows) {
         let tr = $('<tr></tr>');
@@ -54,8 +54,10 @@ function buildInfos(rows){
 }
 
 function prepare(row){
-    $('#paraMAJ').text(paragraphe);
-    $('#id').attr('value', id);
+    $('#cycleMAJ').val(row.cycle_id);
+    $('#jourMAJ').val(row.jour);
+    $('#repasMAJ').attr('value', row.repas);
+    $('#id').attr('value', row.id);
 }
 function prepare_supp(id){
     $('#supp').attr('onclick', 'supp('+id+')');
