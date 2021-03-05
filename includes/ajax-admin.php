@@ -130,11 +130,6 @@ switch ($_GET['action']) {
         $cc = new ContactController();
         $cc->store();
         break;
-    case 'updateContact': 
-        require_once('./controllers/ContactController.php');
-        $cc = new ContactController();
-        $cc->update();
-        break;
     case 'deleteContact': 
         require_once('./controllers/ContactController.php');
         $cc = new ContactController();
