@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once 'includes/link.php' ?>
     <link rel="stylesheet" href="style/admin.css">
-    <title>Gestion de presentation de l'ecole</title>
+    <title>Gestion des emplois du temps</title>
 </head>
 <body>
     <?php 
@@ -20,22 +20,31 @@
     ?>
     <div class="d-flex head p-2 mx-5 mb-3">
         <span class="mr-auto">
-            <h1>Presentation de l'ecole</h1>
+            <h1>Emploi du Temps</h1>
         </span>
         <span class="my-auto">
-            <button class="btn b" data-toggle="modal" data-target="#AddModal">Ajouter une Information</button>
+            <button class="btn b" data-toggle="modal" data-target="#AddModal">Ajouter</button>
             <button class="btn b"><a class="retour" href="/?action=admin">Retour</a></button>
         </span>
     </div>
     <div class="mx-5">
         <table class="table table-bordered">
             <thead>
-                <th>Paragraphe</th>
-                <th>Image</th>
+            <th>Cycle</th>
+                <th>Classe</th>
+                <th>Jour</th>
+                <th>8h-9h</th>
+                <th>9h-10h</th>
+                <th>10h-11h</th>
+                <th>10h-12h</th>
+                <th>1h30-2h30</th>
+                <th>2h30-3h30</th>
+                <th>3h30-4h30</th>
+                <th>4h30-5h30</th>
                 <th></th>
                 <th></th>
             </thead>
-            <tbody id="ppt-body"></tbody>
+            <tbody id="edt-body"></tbody>
         </table>
     </div>
     <div class="modal" id="AddModal">
@@ -44,12 +53,12 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Ajouter Une Information</h4>
+            <h4 class="modal-title">Ajouter</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
           <!-- Modal body -->
-        <form action="/?action=storeInfo" method="POST" enctype="multipart/form-data">
+        <form action="/?action=storeedt" method="POST" enctype="multipart/form-data">
           <div class="modal-body">
                 <div class="form-group">
                   <label for="contenu">Paragraphe:</label>
@@ -77,12 +86,12 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Modifier Une Information</h4>
+            <h4 class="modal-title">Modifier</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
           <!-- Modal body -->
-        <form action="/?action=updateInfo" method="post">
+        <form action="/?action=updateedt" method="post">
           <div class="modal-body">
                 <div class="form-group">
                   <label for="paragraphe">Paragraphe:</label>
@@ -107,13 +116,13 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Supprimer Une INformation</h4>
+            <h4 class="modal-title">Supprimer</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
-              <h5>Voulez vouz vraiment supprimer cette information?</h5>
+              <h5>Voulez vouz vraiment supprimer cette entrée?</h5>
               <div class="mt-5 d-flex flex-row-reverse">
                   <button type="button" class="btn cancel" data-dismiss="modal">Close</button>
                   <button type="submit" id="supp" data-dismiss="modal" class="btn mr-3 submit">Submit</button>

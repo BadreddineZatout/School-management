@@ -13,7 +13,7 @@ class EDTController{
     }
     public function getAll()
     {
-        return json_encode($this->ppt->getAll());
+        return json_encode($this->edt->getAll());
     }
     public function store()
     {

@@ -20,7 +20,7 @@ class edt extends Model{
     }
     public function getAll()
     {
-        $query = $this->db->prepare("SELECT * FROM info_ecole ORDER BY id DESC");
+        $query = $this->db->prepare("SELECT edt.*, cycles.cycle, classes.classe FROM (edt JOIN cycles ON edt.cycle = cycles.id JOIN classes ON classes.id = edt.class)");
         $query->execute();
         $rows = $query->fetchAll();
         return $rows;
