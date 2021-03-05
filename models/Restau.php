@@ -36,7 +36,7 @@ class Restau extends Model{
     }
     public function delete($id)
     {
-        $query = $this->db->prepare("DELETE FROM info_ecole WHERE id=?");
+        $query = $this->db->prepare("DELETE FROM restauration WHERE id=?");
         $query->execute([$id]);
     }
 }

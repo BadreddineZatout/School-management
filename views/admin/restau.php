@@ -23,7 +23,7 @@
             <h1>Presentation de l'ecole</h1>
         </span>
         <span class="my-auto">
-            <button class="btn b" data-toggle="modal" data-target="#AddModal">Ajouter une Information</button>
+            <button class="btn b" data-toggle="modal" data-target="#AddModal">Ajouter au menu</button>
             <button class="btn b"><a class="retour" href="/?action=admin">Retour</a></button>
         </span>
     </div>
@@ -45,7 +45,7 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Ajouter Une Information</h4>
+            <h4 class="modal-title">Ajouter au menu</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
@@ -92,7 +92,7 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Modifier Une Information</h4>
+            <h4 class="modal-title">Modifier la menu</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
@@ -122,13 +122,13 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Supprimer Une INformation</h4>
+            <h4 class="modal-title">Supprimer</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
-              <h5>Voulez vouz vraiment supprimer cette information?</h5>
+              <h5>Voulez vouz vraiment supprimer cette entre?</h5>
               <div class="mt-5 d-flex flex-row-reverse">
                   <button type="button" class="btn cancel" data-dismiss="modal">Close</button>
                   <button type="submit" id="supp" data-dismiss="modal" class="btn mr-3 submit">Submit</button>
