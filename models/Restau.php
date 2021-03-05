@@ -14,15 +14,20 @@ class Restau extends Model{
     }
     public function getAll()
     {
-        $query = $this->db->prepare("SELECT restauration.*, restauration.cycle AS cycle_id, cycles.cycle FROM restauration JOIN cycles ON restauration.cycle = cycles.id");
+        $query = $this->db->prepare("SELECT restauration.*, restauration.cycle AS cycle_id, cycles.cycle FROM restauration JOIN cycles ON restauration.cycle = cycles.id ORDER BY cycle_id");
         $query->execute();
         $rows = $query->fetchAll();
         return $rows;
     }
     public function store()
     {
-        $query = $this->db->prepare("INSERT INTO info_ecole (paragraphe, image) VALUES (?, ?)");
-        $query->execute([$_POST['paragraphe'], 'data/images/'.$_FILES['image_add']['name']]);
+        $query = $this->db->prepare("SELECT id FROM restauration WHERE cycle = ? AND jour = ?");
+        $query->execute([$_POST['cycle'], $_POST['jour']]);
+        $exist = $query->fetch(PDO::FETCH_ASSOC);
+        if(!$exist){
+            $query = $this->db->prepare("INSERT INTO restauration (repas, jour, cycle) VALUES (?, ?, ?)");
+            $query->execute([$_POST['repas'], $_POST['jour'], $_POST['cycle']]);
+        }
     }
     public function update()
     {

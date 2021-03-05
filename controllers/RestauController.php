@@ -19,12 +19,12 @@ class RestauController{
     public function store()
     {
         $this->restau->store();
-        header('location:/?action=admin-edt');
+        header('location:/?action=admin-restau');
     }
     public function update()
     {
         $this->restau->update();
-        header('location:/?action=admin-edt');
+        header('location:/?action=admin-restau');
     }
     public function delete()
     {

@@ -54,24 +54,25 @@
           <div class="modal-body">
                 <div class="form-group">
                   <label for="cycle">Cycle:</label>
-                  <select class="form-control" id="cycle">
+                  <select class="form-control" id="cycle" name="cycle">
                     <option value="1">Primaire</option>
-                    <option value="2">Mpyenne</option>
+                    <option value="2">Moyenne</option>
                     <option value="2">Secondaire</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="jour">Cycle:</label>
-                  <select class="form-control" id="jour">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
+                  <label for="jour">Jour:</label>
+                  <select class="form-control" id="jour" name="jour">
+                    <option value="Dimanche">Dimanche</option>
+                    <option value="Lundi">Lundi</option>
+                    <option value="Mardi">Mardi</option>
+                    <option value="Mercredi">Mercredi</option>
+                    <option value="Jeudi">Jeudi</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="fax">Fax:</label>
-                  <input type="text" class="form-control" id="fax" name="fax" required>
+                  <label for="repas">Repas:</label>
+                  <input type="text" class="form-control" id="repas" name="repas" required>
                 </div>
             </div>
             
