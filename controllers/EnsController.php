@@ -23,6 +23,7 @@ class EnsController{
     }
     public function store()
     {
+        var_dump($_POST);
         $this->ens->store();
         header('location:/?action=admin-ens');
     }

@@ -82,11 +82,11 @@
             </div>
             <div class="form-group">
                   <label for="heure">Heure:</label>
-                  <input type="text" class="form-control" id="heure" name="heure" required>
+                  <input type="text" class="form-control" id="heure" name="heure" placeholder="entre 08h et 5h30" required>
             </div>
             <div class="form-group">
                   <label for="recep">Heure de Reception:</label>
-                  <input type="text" class="form-control" id="recep" name="recep" placeholder="si deja inserer c'est pas la peine a le refaire" required>
+                  <input type="text" class="form-control" id="recep" name="recep" placeholder="si deja inserer c'est pas la peine a le refaire">
             </div>
           </div>
             
