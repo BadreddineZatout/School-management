@@ -6,6 +6,9 @@ $('#add').bind('click', function (e) {
 $('#cycle').bind('change', function (e) {
     classe();
 });
+$('#cycleMAJ').bind('change', function (e) {
+    classeMAJ();
+});
 function get(){
     $.ajax({
         type: "GET",
@@ -56,7 +59,7 @@ function buildEdt(rows){
         let t8 = $('<td></td>').text(row.t8);
         
         let maj = $('<td></td>');
-        maj.append(update_btn(row.id, row.paragraphe));
+        maj.append(update_btn(row));
         let supp = $('<td></td>');
         supp.append(delete_btn(row.id));
         tr.append(cycle);
@@ -76,9 +79,12 @@ function buildEdt(rows){
     }
 }
 
-function prepare(id, paragraphe){
-    $('#paraMAJ').text(paragraphe);
-    $('#id').attr('value', id);
+function prepare(row){
+    $('#cycleMAJ').val(row.cycle_id);
+    $('#jourMAJ').val(row.jour);
+    classeMAJ(row.class);
+    matiereMAJ([row.t1, row.t2, row.t3, row.t4, row.t5, row.t6, row.t7, row.t8]);
+    $('#id').attr('value', row.id);
 }
 function prepare_supp(id){
     $('#supp').attr('onclick', 'supp('+id+')');
@@ -130,5 +136,50 @@ function buildClasse(rows){
         option.text(row.classe);
         option.attr('value', row.id);
         classes.append(option);
+    }
+}
+function classeMAJ(classe){
+    $.ajax({
+        type: "GET",
+        url: "/?action=getclasses&cycle="+$('#cycleMAJ').val(),
+        success: function (response) {
+            buildClasseMAJ(JSON.parse(response));
+            let classes = $('#classMAJ');
+            classes.val(classe);
+        }
+    });
+}
+function buildClasseMAJ(rows){
+    let classes = $('#classMAJ');
+    classes.html('');
+    for(let row of rows){
+        let option = $('<option></option>');
+        option.text(row.classe);
+        option.attr('value', row.id);
+        classes.append(option);
+    }
+}
+function matiereMAJ(matieres){
+    $.ajax({
+        type: "GET",
+        url: "/?action=getmatiere",
+        success: function (response) {
+            buildMatiereMAJ(JSON.parse(response));
+            for(let i = 1; i<=8; i++){
+                $('#tMAJ'+ i).val(matieres[i-1]);
+            }
+        }
+    });
+}
+function buildMatiereMAJ(rows){
+    for(let i = 1; i<=8; i++)
+    {
+        let mat = $('#tMAJ' + i);
+        for (let row of rows){
+            let option = $('<option></option>');
+            option.text(row.nom);
+            option.attr('value', row.code_mat);
+            mat.append(option);
+        }
     }
 }

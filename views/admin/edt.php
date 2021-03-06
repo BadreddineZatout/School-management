@@ -87,49 +87,49 @@
                 <div class="form-group">
                   <label for="t1">8h-9h:</label>
                   <select class="form-control" id="t1" name="t1">
-                  <option value="" selected>Choisir une matiere</option>
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t2">9h-10h:</label>
                   <select class="form-control" id="t2" name="t2">
-                  <option value="" selected>Choisir une matiere</option>
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t3">10h-11h:</label>
                   <select class="form-control" id="t3" name="t3">
-                  <option value="" selected>Choisir une matiere</option>
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t4">10h-12h:</label>
                   <select class="form-control" id="t4" name="t4">
-                  <option value="" selected>Choisir une matiere</option>
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t5">1h30-2h30:</label>
                   <select class="form-control" id="t5" name="t5">
-                  <option value="" selected>Choisir une matiere</option>
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t6">2h30-3h30:</label>
                   <select class="form-control" id="t6" name="t6">
-                  <option value="" selected>Choisir une matiere</option>
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t7">3h30-4h30:</label>
                   <select class="form-control" id="t7" name="t7">
-                  <option value="" selected>Choisir une matiere</option>
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t8">4h30-5h30:</label>
                   <select class="form-control" id="t8" name="t8">
-                  <option value="" selected>Choisir une matiere</option>
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
             </div>
@@ -181,45 +181,54 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="t1MAJ">8h-9h:</label>
-                  <select class="form-control" id="t1MAJ" name="t1MAJ">
+                  <label for="tMAJ1">8h-9h:</label>
+                  <select class="form-control" id="tMAJ1" name="tMAJ1">
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="t2MAJ">9h-10h:</label>
-                  <select class="form-control" id="t2MAJ" name="t2MAJ">
+                  <label for="tMAJ2">9h-10h:</label>
+                  <select class="form-control" id="tMAJ2" name="tMAJ2">
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="t3MAJ">10h-11h:</label>
-                  <select class="form-control" id="t3MAJ" name="t3MAJ">
+                  <label for="tMAJ3">10h-11h:</label>
+                  <select class="form-control" id="tMAJ3" name="tMAJ3">
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="t4MAJ">10h-12h:</label>
-                  <select class="form-control" id="t4MAJ" name="t4MAJ">
+                  <label for="tMAJ4">10h-12h:</label>
+                  <select class="form-control" id="tMAJ4" name="tMAJ4">
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="t5MAJ">1h30-2h30:</label>
-                  <select class="form-control" id="t5MAJ" name="t5MAJ">
+                  <label for="tMAJ5">1h30-2h30:</label>
+                  <select class="form-control" id="tMAJ5" name="tMAJ5">
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="t6MAJ">2h30-3h30:</label>
-                  <select class="form-control" id="t6MAJ" name="t6MAJ">
+                  <label for="tMAJ6">2h30-3h30:</label>
+                  <select class="form-control" id="tMAJ6" name="tMAJ6">
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="t7MAJ">3h30-4h30:</label>
-                  <select class="form-control" id="t7MAJ" name="t7MAJ">
+                  <label for="tMAJ7">3h30-4h30:</label>
+                  <select class="form-control" id="tMAJ7" name="tMAJ7">
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="t8MAJ">4h30-5h30:</label>
-                  <select class="form-control" id="t8MAJ" name="t8MAJ">
+                  <label for="tMAJ8">4h30-5h30:</label>
+                  <select class="form-control" id="tMAJ8" name="tMAJ8">
+                  <option value="" selected>Vide</option>
                   </select>
                 </div>
+                <input type="hidden" name="id" id="id">
             </div>
             
             <!-- Modal footer -->
