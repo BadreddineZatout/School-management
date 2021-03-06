@@ -59,14 +59,16 @@ function update_btn(row){
     return update;
 }
 
-function delete_btn(id){
+function delete_btn(id, c, h){
     let del = $('<button></button>').text('Supprimer');
     del.addClass('btn');
     del.css('background-color', '#E27802');
     del.css('color', 'white');
     del.attr('data-toggle', 'modal');
     del.attr('data-target', '#DeleteModal');
-    del.attr('onclick', 'prepare_supp('+id+')');
+    del.bind("click", function(){
+        prepare_supp(id, c, h);
+    });
     return del;
 }
 function buildEns(rows){
@@ -84,11 +86,8 @@ function buildRecep(rows){
         let recep = $('<td></td>').text(row.temps_recep);
         let maj = $('<td></td>');
         maj.append(update_btn(row));
-        let supp = $('<td></td>');
-        supp.append(delete_btn(row.id));
         tr.append(recep);
         tr.append(maj);
-        tr.append(supp);
         $('#recep-body').append(tr);
     }
 }
@@ -101,7 +100,7 @@ function buildClass(rows){
         let maj = $('<td></td>');
         maj.append(update_btn(row));
         let supp = $('<td></td>');
-        supp.append(delete_btn(row.id));
+        supp.append(delete_btn(row.ens_id, row.class_id, row.heure));
         tr.append(classe);
         tr.append(heure);
         tr.append(maj);
@@ -129,15 +128,17 @@ function prepare(id, paragraphe){
     // $('#paraMAJ').text(paragraphe);
     // $('#id').attr('value', id);
 }
-function prepare_supp(id){
-    $('#supp').attr('onclick', 'supp('+id+')');
+function prepare_supp(id, c, h){
+    $('#supp').bind("click", function(){
+        supp(id, c, h);
+    });
 }
-function supp(id){
+function supp(id, c, h){
     $.ajax({
         type: "DELETE",
-        url: "/?action=deleteEns&id="+id,
+        url: "/?action=deleteEns&id="+id+"&class="+c+"&heure="+h,
         success: function (response) {
-            get();
+            getEnsInfos();
         }
     });
 }

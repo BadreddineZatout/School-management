@@ -34,6 +34,6 @@ class EnsController{
     }
     public function delete()
     {
-        $this->ens->delete($_GET['id']);
+        $this->ens->delete($_GET['id'], $_GET['class'], $_GET['heure']);
     }
 }

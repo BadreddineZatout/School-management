@@ -50,7 +50,6 @@
             <thead>
                 <th>Reception</th>
                 <th></th>
-                <th></th>
             </thead>
             <tbody id="recep-body"></tbody>
         </table>
