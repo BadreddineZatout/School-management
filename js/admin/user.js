@@ -4,7 +4,7 @@ function get(){
         type: "GET",
         url: "/?action=getUser",
         success: function (response) {
-            console.log(JSON.parse(response));
+            buildUsers(JSON.parse(response));
         }
     });
 }
@@ -32,20 +32,34 @@ function delete_btn(id){
     return del;
 }
 function buildUsers(rows){
-    $('#article-body').html('');
+    $('#users-body').html('');
     for (let row of rows) {
         let tr = $('<tr></tr>');
-        let titre = $('<td></td>').text(row.titre);
-        let contenu = $('<td></td>').text(row.contenu);
+        let nom = $('<td></td>').text(row.nom);
+        let prenom = $('<td></td>').text(row.prenom);
+        let adresse = $('<td></td>').text(row.adresse);
+        let email = $('<td></td>').text(row.email);
+        let telephone1 = $('<td></td>').text(row.telephone1);
+        let telephone2 = $('<td></td>').text(row.telephone2);
+        let telephone3 = $('<td></td>').text(row.telephone3);
+        let username = $('<td></td>').text(row.username);
+        let password = $('<td></td>').text(row.password);
         let maj = $('<td></td>');
         maj.append(update_btn(row));
         let supp = $('<td></td>');
         supp.append(delete_btn(row.id));
-        tr.append(titre);
-        tr.append(contenu);
+        tr.append(nom);
+        tr.append(prenom);
+        tr.append(adresse);
+        tr.append(email);
+        tr.append(telephone1);
+        tr.append(telephone2);
+        tr.append(telephone3);
+        tr.append(username);
+        tr.append(password);
         tr.append(maj);
         tr.append(supp);
-        $('#article-body').append(tr);
+        $('#users-body').append(tr);
     }
 }
 

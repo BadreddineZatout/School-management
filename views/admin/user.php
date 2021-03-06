@@ -42,7 +42,7 @@
                 <th></th>
                 <th></th>
             </thead>
-            <tbody id="ppt-body"></tbody>
+            <tbody id="users-body"></tbody>
         </table>
     </div>
     <div class="modal" id="AddModal">
