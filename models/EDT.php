@@ -20,15 +20,28 @@ class edt extends Model{
     }
     public function getAll()
     {
-        $query = $this->db->prepare("SELECT edt.*, cycles.cycle, classes.classe FROM (edt JOIN cycles ON edt.cycle = cycles.id JOIN classes ON classes.id = edt.class)");
+        $query = $this->db->prepare("SELECT edt.*, cycles.cycle, classes.classe FROM (edt JOIN cycles ON edt.cycle = cycles.id JOIN classes ON classes.id = edt.class) ORDER BY cycles.id");
         $query->execute();
         $rows = $query->fetchAll();
         return $rows;
     }
     public function store()
     {
-        $query = $this->db->prepare("INSERT INTO info_ecole (paragraphe, image) VALUES (?, ?)");
-        $query->execute([$_POST['paragraphe'], 'data/images/'.$_FILES['image_add']['name']]);
+        $query = $this->db->prepare("SELECT id FROM edt WHERE cycle = ? AND class=? AND jour = ?");
+        $query->execute([$_POST['cycle'], $_POST['class'], $_POST['jour']]);
+        $exist = $query->fetch(PDO::FETCH_ASSOC);
+        if(!$exist){
+            $query = $this->db->prepare("INSERT INTO edt (cycle, class, jour, t1, t2, t3, t4, t5, t6, t7, t8) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $t1 = empty($_POST['t1'])?NULL:$_POST['t1'];
+            $t2 = empty($_POST['t2'])?NULL:$_POST['t2'];
+            $t3 = empty($_POST['t3'])?NULL:$_POST['t3'];
+            $t4 = empty($_POST['t4'])?NULL:$_POST['t4'];
+            $t5 = empty($_POST['t5'])?NULL:$_POST['t5'];
+            $t6 = empty($_POST['t6'])?NULL:$_POST['t6'];
+            $t7 = empty($_POST['t7'])?NULL:$_POST['t7'];
+            $t8 = empty($_POST['t8'])?NULL:$_POST['t8'];
+            $query->execute([$_POST['cycle'], $_POST['class'], $_POST['jour'], $t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8]);
+        }
     }
     public function update()
     {
@@ -48,7 +61,7 @@ class edt extends Model{
     }
     public function getMatieres()
     {
-        $query = $this->db->prepare("SELECT * FROM matiere");
+        $query = $this->db->prepare("SELECT * FROM matieres");
         $query->execute();
         return $query->fetchAll();
     }

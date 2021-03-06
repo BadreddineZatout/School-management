@@ -16,10 +16,10 @@ class EDTController{
         return json_encode($this->edt->getAll());
     }
     public function store()
-    {
-        $target = 'data/images/'.basename($_FILES['image_add']['name']);
-        move_uploaded_file($_FILES['image_add']['tmp_name'], $target);
-        $this->edt->store();
+    {   
+        if ($_POST['cycle']!=0){
+            $this->edt->store();
+        }
         header('location:/?action=admin-edt');
     }
     public function update()

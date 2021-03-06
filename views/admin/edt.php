@@ -63,7 +63,7 @@
           <div class="form-group">
                   <label for="cycle">Cycle:</label>
                   <select class="form-control" id="cycle" name="cycle">
-                    <option value="0" selected></option>
+                    <option value="0" selected>Choisir une cycle</option>
                     <option value="1">Primaire</option>
                     <option value="2">Moyenne</option>
                     <option value="3">Secondaire</option>
@@ -75,8 +75,8 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="jourMAJ">Jour:</label>
-                  <select class="form-control" id="jourMAJ" name="jourMAJ">
+                  <label for="jour">Jour:</label>
+                  <select class="form-control" id="jour" name="jour">
                     <option value="Dimanche">Dimanche</option>
                     <option value="Lundi">Lundi</option>
                     <option value="Mardi">Mardi</option>
@@ -87,41 +87,49 @@
                 <div class="form-group">
                   <label for="t1">8h-9h:</label>
                   <select class="form-control" id="t1" name="t1">
+                  <option value="" selected>Choisir une matiere</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t2">9h-10h:</label>
                   <select class="form-control" id="t2" name="t2">
+                  <option value="" selected>Choisir une matiere</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t3">10h-11h:</label>
                   <select class="form-control" id="t3" name="t3">
+                  <option value="" selected>Choisir une matiere</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t4">10h-12h:</label>
                   <select class="form-control" id="t4" name="t4">
+                  <option value="" selected>Choisir une matiere</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t5">1h30-2h30:</label>
                   <select class="form-control" id="t5" name="t5">
+                  <option value="" selected>Choisir une matiere</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t6">2h30-3h30:</label>
                   <select class="form-control" id="t6" name="t6">
+                  <option value="" selected>Choisir une matiere</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t7">3h30-4h30:</label>
                   <select class="form-control" id="t7" name="t7">
+                  <option value="" selected>Choisir une matiere</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="t8">4h30-5h30:</label>
                   <select class="form-control" id="t8" name="t8">
+                  <option value="" selected>Choisir une matiere</option>
                   </select>
                 </div>
             </div>
