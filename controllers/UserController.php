@@ -2,9 +2,11 @@
 include 'models/User.php';
 class UserController{
     private $type;
+    private $user;
     public function __construct(int $type)
     {
         $this->type = $type;
+        $this->user = new User();
     }
 
     public function login_page()
@@ -13,8 +15,7 @@ class UserController{
     }
     public function login($username, $pdw)
     {
-        $user = new User();
-        return $user->login($username, $pdw);
+        return $this->user->login($username, $pdw);
     }
     public function redirectUser($type){
         if ($type == 2){
@@ -30,22 +31,20 @@ class UserController{
     }
     public function getAll()
     {
-        return json_encode($this->ppt->getAll());
+        return json_encode($this->user->getAll());
     }
     public function store()
     {
-        $target = 'data/images/'.basename($_FILES['image_add']['name']);
-        move_uploaded_file($_FILES['image_add']['tmp_name'], $target);
-        $this->edt->store();
-        header('location:/?action=admin-edt');
+        $this->user->store();
+        header('location:/?action=admin-user');
     }
     public function update()
     {
-        $this->edt->update();
-        header('location:/?action=admin-edt');
+        $this->user->update();
+        header('location:/?action=admin-user');
     }
     public function delete()
     {
-        $this->edt->delete($_GET['id']);
+        $this->user->delete($_GET['id']);
     }
 }

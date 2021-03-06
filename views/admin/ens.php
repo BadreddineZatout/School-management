@@ -140,7 +140,7 @@
 
           <!-- Modal body -->
           <div class="modal-body">
-              <h5>Voulez vouz vraiment supprimer cet enseignant?</h5>
+              <h5>Voulez vouz vraiment supprimer cet classe?</h5>
               <div class="mt-5 d-flex flex-row-reverse">
                   <button type="button" class="btn cancel" data-dismiss="modal">Close</button>
                   <button type="submit" id="supp" data-dismiss="modal" class="btn mr-3 submit">Submit</button>
