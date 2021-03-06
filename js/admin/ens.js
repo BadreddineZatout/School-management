@@ -97,13 +97,10 @@ function buildClass(rows){
         let tr = $('<tr></tr>');
         let classe = $('<td></td>').text(row.classe);
         let heure = $('<td></td>').text(row.heure);
-        let maj = $('<td></td>');
-        maj.append(update_btn(row));
         let supp = $('<td></td>');
         supp.append(delete_btn(row.ens_id, row.class_id, row.heure));
         tr.append(classe);
         tr.append(heure);
-        tr.append(maj);
         tr.append(supp);
         $('#class-body').append(tr);
     }
@@ -123,10 +120,6 @@ function buildC(rows){
         $('#class').append(option);
         option.val(row.id);
     }
-}
-function prepare(id, paragraphe){
-    // $('#paraMAJ').text(paragraphe);
-    // $('#id').attr('value', id);
 }
 function prepare_supp(id, c, h){
     $('#supp').bind("click", function(){

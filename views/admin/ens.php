@@ -40,7 +40,6 @@
                 <th>Classe</th>
                 <th>Heure</th>
                 <th></th>
-                <th></th>
             </thead>
             <tbody id="class-body"></tbody>
         </table>
