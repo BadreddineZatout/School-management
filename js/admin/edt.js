@@ -1,5 +1,11 @@
 var edt;
 $('document').ready(get());
+$('#add').bind('click', function (e) {
+    matiere();
+});
+$('#cycle').bind('change', function (e) {
+    classe();
+});
 function get(){
     $.ajax({
         type: "GET",
@@ -85,4 +91,44 @@ function supp(id){
             get();
         }
     });
+}
+function matiere(){
+    $.ajax({
+        type: "GET",
+        url: "/?action=getmatiere",
+        success: function (response) {
+            buildMatiere(JSON.parse(response));
+        }
+    });
+}
+function buildMatiere(rows){
+    for(let i = 1; i<=8; i++)
+    {
+        let mat = $('#t' + i);
+        for (let row of rows){
+            let option = $('<option></option>');
+            option.text(row.nom);
+            option.attr('value', row.code_mat);
+            mat.append(option);
+        }
+    }
+}
+function classe(){
+    $.ajax({
+        type: "GET",
+        url: "/?action=getclasses&cycle="+$('#cycle').val(),
+        success: function (response) {
+            buildClasse(JSON.parse(response));
+        }
+    });
+}
+function buildClasse(rows){
+    let classes = $('#class');
+    classes.html('');
+    for(let row of rows){
+        let option = $('<option></option>');
+        option.text(row.classe);
+        option.attr('value', row.id);
+        classes.append(option);
+    }
 }

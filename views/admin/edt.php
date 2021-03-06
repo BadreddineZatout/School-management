@@ -23,7 +23,7 @@
             <h1>Emploi du Temps</h1>
         </span>
         <span class="my-auto">
-            <button class="btn b" data-toggle="modal" data-target="#AddModal">Ajouter</button>
+            <button id="add" class="btn b" data-toggle="modal" data-target="#AddModal">Ajouter</button>
             <button class="btn b"><a class="retour" href="/?action=admin">Retour</a></button>
         </span>
     </div>
@@ -58,11 +58,12 @@
           </div>
 
           <!-- Modal body -->
-        <form action="/?action=storeedt" method="POST" enctype="multipart/form-data">
+        <form action="/?action=storeedt" method="POST">
           <div class="modal-body">
           <div class="form-group">
                   <label for="cycle">Cycle:</label>
                   <select class="form-control" id="cycle" name="cycle">
+                    <option value="0" selected></option>
                     <option value="1">Primaire</option>
                     <option value="2">Moyenne</option>
                     <option value="3">Secondaire</option>

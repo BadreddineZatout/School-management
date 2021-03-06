@@ -31,4 +31,13 @@ class EDTController{
     {
         $this->edt->delete($_GET['id']);
     }
+    public function getClasses()
+    {
+        return json_encode($this->edt->getClasses());
+    }
+    public function getMatieres()
+    {
+        return json_encode($this->edt->getMatieres());
+    }
+    
 }

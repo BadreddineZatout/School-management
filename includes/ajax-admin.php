@@ -135,4 +135,14 @@ switch ($_GET['action']) {
         $cc = new ContactController();
         $cc->delete();
         break;
+    case 'getclasses': 
+        require_once('./controllers/EDTController.php');
+        $ec = new EDTController();
+        echo($ec->getClasses());
+        break;
+    case 'getmatiere': 
+        require_once('./controllers/EDTController.php');
+        $ec = new EDTController();
+        echo($ec->getMatieres());
+        break;
     }

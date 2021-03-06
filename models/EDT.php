@@ -40,4 +40,16 @@ class edt extends Model{
         $query = $this->db->prepare("DELETE FROM info_ecole WHERE id=?");
         $query->execute([$id]);
     }
+    public function getClasses()
+    {
+        $query = $this->db->prepare("SELECT * FROM classes WHERE cycle=?");
+        $query->execute([$_GET['cycle']]);
+        return $query->fetchAll();
+    }
+    public function getMatieres()
+    {
+        $query = $this->db->prepare("SELECT * FROM matiere");
+        $query->execute();
+        return $query->fetchAll();
+    }
 }
