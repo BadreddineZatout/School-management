@@ -60,13 +60,68 @@
           <!-- Modal body -->
         <form action="/?action=storeedt" method="POST" enctype="multipart/form-data">
           <div class="modal-body">
-                <div class="form-group">
-                  <label for="contenu">Paragraphe:</label>
-                  <textarea class="form-control" name="paragraphe" id="paragraphe" placeholder="Introduire Paragraphe" required></textarea>
+          <div class="form-group">
+                  <label for="cycle">Cycle:</label>
+                  <select class="form-control" id="cycle" name="cycle">
+                    <option value="1">Primaire</option>
+                    <option value="2">Moyenne</option>
+                    <option value="3">Secondaire</option>
+                  </select>
                 </div>
                 <div class="form-group">
-                  <label for="img">Image:</label>
-                  <input type="file" class="form-control" name="image_add" id="img" required>
+                  <label for="class">Class:</label>
+                  <select class="form-control" id="class" name="class">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="jourMAJ">Jour:</label>
+                  <select class="form-control" id="jourMAJ" name="jourMAJ">
+                    <option value="Dimanche">Dimanche</option>
+                    <option value="Lundi">Lundi</option>
+                    <option value="Mardi">Mardi</option>
+                    <option value="Mercredi">Mercredi</option>
+                    <option value="Jeudi">Jeudi</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t1">8h-9h:</label>
+                  <select class="form-control" id="t1" name="t1">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t2">9h-10h:</label>
+                  <select class="form-control" id="t2" name="t2">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t3">10h-11h:</label>
+                  <select class="form-control" id="t3" name="t3">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t4">10h-12h:</label>
+                  <select class="form-control" id="t4" name="t4">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t5">1h30-2h30:</label>
+                  <select class="form-control" id="t5" name="t5">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t6">2h30-3h30:</label>
+                  <select class="form-control" id="t6" name="t6">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t7">3h30-4h30:</label>
+                  <select class="form-control" id="t7" name="t7">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t8">4h30-5h30:</label>
+                  <select class="form-control" id="t8" name="t8">
+                  </select>
                 </div>
             </div>
             
@@ -94,9 +149,67 @@
         <form action="/?action=updateedt" method="post">
           <div class="modal-body">
                 <div class="form-group">
-                  <label for="paragraphe">Paragraphe:</label>
-                  <textarea class="form-control" name="paraMAJ" id="paraMAJ" required></textarea>
-                  <input type="hidden" name="id" id="id">
+                  <label for="cycleMAJ">Cycle:</label>
+                  <select class="form-control" id="cycleMAJ" name="cycleMAJ">
+                    <option value="1">Primaire</option>
+                    <option value="2">Moyenne</option>
+                    <option value="3">Secondaire</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="classMAJ">Class:</label>
+                  <select class="form-control" id="classMAJ" name="classMAJ">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="jourMAJ">Jour:</label>
+                  <select class="form-control" id="jourMAJ" name="jourMAJ">
+                    <option value="Dimanche">Dimanche</option>
+                    <option value="Lundi">Lundi</option>
+                    <option value="Mardi">Mardi</option>
+                    <option value="Mercredi">Mercredi</option>
+                    <option value="Jeudi">Jeudi</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t1MAJ">8h-9h:</label>
+                  <select class="form-control" id="t1MAJ" name="t1MAJ">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t2MAJ">9h-10h:</label>
+                  <select class="form-control" id="t2MAJ" name="t2MAJ">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t3MAJ">10h-11h:</label>
+                  <select class="form-control" id="t3MAJ" name="t3MAJ">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t4MAJ">10h-12h:</label>
+                  <select class="form-control" id="t4MAJ" name="t4MAJ">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t5MAJ">1h30-2h30:</label>
+                  <select class="form-control" id="t5MAJ" name="t5MAJ">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t6MAJ">2h30-3h30:</label>
+                  <select class="form-control" id="t6MAJ" name="t6MAJ">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t7MAJ">3h30-4h30:</label>
+                  <select class="form-control" id="t7MAJ" name="t7MAJ">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="t8MAJ">4h30-5h30:</label>
+                  <select class="form-control" id="t8MAJ" name="t8MAJ">
+                  </select>
                 </div>
             </div>
             

@@ -99,7 +99,7 @@
           <!-- Modal body -->
         <form action="/?action=updateRestau" method="post">
           <div class="modal-body">
-          <div class="form-group">
+                <div class="form-group">
                   <label for="cycleMAJ">Cycle:</label>
                   <select class="form-control" id="cycleMAJ" name="cycleMAJ">
                     <option value="1">Primaire</option>
