@@ -5,6 +5,7 @@ $('document').ready(function(e){
 });
 $('#ens').change(function (e) { 
     getEnsInfos();
+    $('#classes').show();
 });
 $('#class-btn').click(function (e) { 
     $('#reception').hide();    
@@ -120,6 +121,10 @@ function buildC(rows){
         $('#class').append(option);
         option.val(row.id);
     }
+}
+function prepare(row){
+    $('#recepMAJ').attr('value', row.temps_recep);
+    $('#id').attr('value', row.id);
 }
 function prepare_supp(id, c, h){
     $('#supp').bind("click", function(){

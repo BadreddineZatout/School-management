@@ -111,11 +111,11 @@
           <!-- Modal body -->
         <form action="/?action=updateEns" method="post">
           <div class="modal-body">
-                <div class="form-group">
-                  <label for="paragraphe">Paragraphe:</label>
-                  <textarea class="form-control" name="paraMAJ" id="paraMAJ" required></textarea>
+          <div class="form-group">
+                  <label for="recepMAJ">Heure de Reception:</label>
+                  <input type="text" class="form-control" id="recepMAJ" name="recepMAJ">
                   <input type="hidden" name="id" id="id">
-                </div>
+            </div>
             </div>
             
             <!-- Modal footer -->

@@ -21,7 +21,7 @@ class Enseignant extends Model{
     }
     public function getInfo($id)
     {
-        $query = $this->db->prepare("SELECT temps_recep FROM enseignants WHERE id=?");
+        $query = $this->db->prepare("SELECT id, temps_recep FROM enseignants WHERE id=?");
         $query->execute([$id]);
         $rows[0] = $query->fetchAll();
         $query = $this->db->prepare("SELECT classes.classe, eh.* FROM (enseignants_class AS ec JOIN classes ON classes.id=ec.class_id JOIN enseignants_heure AS eh ON eh.class_id=classes.id) WHERE eh.ens_id=?");
@@ -54,8 +54,8 @@ class Enseignant extends Model{
     }
     public function update()
     {
-        $query = $this->db->prepare("UPDATE info_ecole SET paragraphe=?WHERE id=?");
-        $query->execute([$_POST['paraMAJ'], $_POST['id']]);
+        $query = $this->db->prepare("UPDATE enseignants SET temps_recep=?WHERE id=?");
+        $query->execute([$_POST['recepMAJ'], $_POST['id']]);
     }
     public function delete($id, $class, $heure)
     {
