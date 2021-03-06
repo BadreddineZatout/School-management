@@ -38,10 +38,15 @@ class Enseignant extends Model{
     }
     public function store()
     {
-        $query = $this->db->prepare("INSERT INTO enseignants_class (ens_id, class_id) VALUES (?, ?)");
+        $query = $this->db->prepare("SELECT * FROM enseignants_class WHERE ens_id = ? AND class_id = ?");
         $query->execute([$_POST['enseignant'], $_POST['class']]);
-        $query = $this->db->prepare("INSERT INTO enseignants_heure (ens_id, class_id, heure) VALUES (?, ?, ?)");
-        $query->execute([$_POST['enseignant'], $_POST['class'], $_POST['heure']]);
+        $exist = $query->fetch(PDO::FETCH_ASSOC);
+        if(!$exist){
+            $query = $this->db->prepare("INSERT INTO enseignants_class (ens_id, class_id) VALUES (?, ?)");
+            $query->execute([$_POST['enseignant'], $_POST['class']]);
+            $query = $this->db->prepare("INSERT INTO enseignants_heure (ens_id, class_id, heure) VALUES (?, ?, ?)");
+            $query->execute([$_POST['enseignant'], $_POST['class'], $_POST['heure']]);
+        }
         if(!empty($_POST['recep'])){
             $query = $this->db->prepare("UPDATE enseignants SET temps_recep=?WHERE id=?");
             $query->execute([$_POST['recep'], $_POST['enseignant']]);
