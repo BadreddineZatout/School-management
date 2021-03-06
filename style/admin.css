@@ -3,7 +3,7 @@
     color: white;
     border-radius: 10px;
 }
-.head button{
+.head button, .b{
     color: white;
     background-color: #E27802;
 }

@@ -1,31 +1,34 @@
 <?php
 require 'models/Enseignant.php';
 class EnsController{
-
+    private $ens;
+    public function __construct()
+    {
+        $this->ens = new Enseignant();   
+    }
     public function EnsPage()
     {
-        $ens = new Enseignant();
-        $ens_rows = $ens->getEns($_GET['cycle']);
+        $ens_rows = $this->ens->getEns($_GET['cycle']);
         require 'views/cycle/ens.php';
     }
     public function getAll()
     {
-        return json_encode($this->ppt->getAll());
+        if(isset($_GET['ens'])){
+            return json_encode($this->ens->getInfo($_GET['ens']));
+        }else return json_encode($this->ens->getAll());
     }
     public function store()
     {
-        $target = 'data/images/'.basename($_FILES['image_add']['name']);
-        move_uploaded_file($_FILES['image_add']['tmp_name'], $target);
-        $this->edt->store();
-        header('location:/?action=admin-edt');
+        $this->ens->store();
+        header('location:/?action=admin-ens');
     }
     public function update()
     {
-        $this->edt->update();
-        header('location:/?action=admin-edt');
+        $this->ens->update();
+        header('location:/?action=admin-ens');
     }
     public function delete()
     {
-        $this->edt->delete($_GET['id']);
+        $this->ens->delete($_GET['id']);
     }
 }
