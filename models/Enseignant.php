@@ -29,6 +29,13 @@ class Enseignant extends Model{
         $rows[1] = $query->fetchAll();
         return $rows;
     }
+    public function getClasses()
+    {
+        $query = $this->db->prepare("SELECT * FROM classes");
+        $query->execute();
+        $rows = $query->fetchAll();
+        return $rows;
+    }
     public function store()
     {
         $query = $this->db->prepare("INSERT INTO info_ecole (paragraphe, image) VALUES (?, ?)");

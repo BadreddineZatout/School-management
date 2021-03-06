@@ -66,17 +66,29 @@
           </div>
 
           <!-- Modal body -->
-        <form action="/?action=storeEns" method="POST" enctype="multipart/form-data">
+        <form action="/?action=storeEns" method="POST">
           <div class="modal-body">
-                <div class="form-group">
-                  <label for="contenu">Paragraphe:</label>
-                  <textarea class="form-control" name="paragraphe" id="paragraphe" placeholder="Introduire Paragraphe" required></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="img">Image:</label>
-                  <input type="file" class="form-control" name="image_add" id="img" required>
-                </div>
+            <div class="form-group">
+                <label for="enseignant">Enseignant:</label>
+                <select class="form-control" id="enseignant" name="enseignant">
+                    <option value="0">Les Enseignants</option>
+                </select>
             </div>
+            <div class="form-group">
+                <label for="class">Classe:</label>
+                <select class="form-control" id="class" name="class">
+                <option value="0">Les Classes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                  <label for="heure">Heure:</label>
+                  <input type="text" class="form-control" id="heure" name="heure" required>
+            </div>
+            <div class="form-group">
+                  <label for="recep">Heure de Reception:</label>
+                  <input type="text" class="form-control" id="recep" name="recep" placeholder="si deja inserer c'est pas la peine a le refaire" required>
+            </div>
+          </div>
             
             <!-- Modal footer -->
             <div class="modal-footer">

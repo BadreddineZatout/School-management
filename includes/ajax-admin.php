@@ -65,6 +65,11 @@ switch ($_GET['action']) {
         $cc = new EnsController();
         echo($cc->getAll());
         break;
+    case'getClasses': 
+        require_once('./controllers/EnsController.php');
+        $cc = new EnsController();
+        echo($cc->getClasses());
+        break;
     case 'storeEns': 
         require_once('./controllers/EnsController.php');
         $cc = new EnsController();

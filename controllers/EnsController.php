@@ -17,6 +17,10 @@ class EnsController{
             return json_encode($this->ens->getInfo($_GET['ens']));
         }else return json_encode($this->ens->getAll());
     }
+    public function getClasses()
+    {
+        return json_encode($this->ens->getClasses());
+    }
     public function store()
     {
         $this->ens->store();

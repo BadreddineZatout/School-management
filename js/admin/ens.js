@@ -1,5 +1,8 @@
 var infos;
-$('document').ready(get());
+$('document').ready(function(e){
+    get();
+    getclass();
+});
 $('#ens').change(function (e) { 
     getEnsInfos();
 });
@@ -19,6 +22,16 @@ function get(){
         url: "/?action=getEns",
         success: function (response) {
             buildEns(JSON.parse(response));
+            buildAdd(JSON.parse(response));
+        }
+    });
+}
+function getclass(){
+    $.ajax({
+        type: "GET",
+        url: "/?action=getClasses",
+        success: function (response) {
+            buildC(JSON.parse(response));
         }
     });
 }
@@ -96,7 +109,22 @@ function buildClass(rows){
         $('#class-body').append(tr);
     }
 }
-
+function buildAdd(rows){
+    for (let row of rows) {
+        let option = $('<option></option>');
+        option.text(row.nom + ' ' + row.prenom);
+        $('#enseignant').append(option);
+        option.val(row.id);
+    }
+}
+function buildC(rows){
+    for (let row of rows) {
+        let option = $('<option></option>');
+        option.text(row.classe);
+        $('#class').append(option);
+        option.val(row.id);
+    }
+}
 function prepare(id, paragraphe){
     // $('#paraMAJ').text(paragraphe);
     // $('#id').attr('value', id);
