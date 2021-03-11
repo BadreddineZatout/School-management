@@ -72,4 +72,16 @@ class Enseignant extends Model{
         $query = $this->db->prepare("UPDATE enseignants SET nom=?, prenom= ?, adresse=?, email=?, telephone1=?, telephone2=?, telephone3=? WHERE user_id=?");
         $query->execute([$_POST['nomMAJ'], $_POST['prenomMAJ'], $_POST['adresseMAJ'], $_POST['emailMAJ'], $_POST['tele1MAJ'], $_POST['tele2MAJ'], $_POST['tele3MAJ'], $_POST['id']]);
     }
+    public function deleteEns($id)
+    {
+        $query = $this->db->prepare("SELECT id FROM enseignants WHERE user_id = ?");
+        $query->execute([$id]);
+        $ens = $query->fetch(PDO::FETCH_ASSOC)['id'];
+        $query = $this->db->prepare("DELETE FROM enseignants_heure WHERE ens_id=?");
+        $query->execute([$ens]);
+        $query = $this->db->prepare("DELETE FROM enseignants_class WHERE ens_id=?");
+        $query->execute([$ens]);
+        $query = $this->db->prepare("DELETE FROM enseignants WHERE id=?");
+        $query->execute([$ens]);
+    }
 }

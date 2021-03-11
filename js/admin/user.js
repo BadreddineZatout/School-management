@@ -21,14 +21,16 @@ function update_btn(row){
     return update;
 }
 
-function delete_btn(id){
+function delete_btn(id, type){
     let del = $('<button></button>').text('Supprimer');
     del.addClass('btn');
     del.css('background-color', '#E27802');
     del.css('color', 'white');
     del.attr('data-toggle', 'modal');
     del.attr('data-target', '#DeleteModal');
-    del.attr('onclick', 'prepare_supp('+id+')');
+    del.bind('click', function () {
+        prepare_supp(id, type);
+    });
     return del;
 }
 function buildUsers(rows){
@@ -62,7 +64,7 @@ function buildUsers(rows){
         let maj = $('<td></td>');
         maj.append(update_btn(row));
         let supp = $('<td></td>');
-        supp.append(delete_btn(row.id));
+        supp.append(delete_btn(row.id, row.type));
         tr.append(nom);
         tr.append(prenom);
         tr.append(adresse);
@@ -93,13 +95,15 @@ function prepare(row){
     $('#id').attr('value', row.id);
     $('#typeMAJ').val(row.type);
 }
-function prepare_supp(id){
-    $('#supp').attr('onclick', 'supp('+id+')');
+function prepare_supp(id, type){
+    $('#supp').bind('click', function () {
+        supp(id,type);
+    });
 }
-function supp(id){
+function supp(id, type){
     $.ajax({
         type: "DELETE",
-        url: "/?action=deleteUser&id="+id,
+        url: "/?action=deleteUser&id="+id+"&type="+type,
         success: function (response) {
             get();
         }

@@ -49,4 +49,16 @@ class Eleve extends Model{
         $query = $this->db->prepare("UPDATE eleves SET nom=?, prenom= ?, adresse=?, email=?, telephone1=?, telephone2=?, telephone3=? WHERE user_id=?");
         $query->execute([$_POST['nomMAJ'], $_POST['prenomMAJ'], $_POST['adresseMAJ'], $_POST['emailMAJ'], $_POST['tele1MAJ'], $_POST['tele2MAJ'], $_POST['tele3MAJ'], $_POST['id']]);
     }
+    public function delete($id)
+    {
+        $query = $this->db->prepare("SELECT id FROM eleves WHERE user_id = ?");
+        $query->execute([$id]);
+        $eleve = $query->fetch(PDO::FETCH_ASSOC)['id'];
+        $query = $this->db->prepare("DELETE FROM eleve_activite WHERE eleve=?");
+        $query->execute([$eleve]);
+        $query = $this->db->prepare("DELETE FROM eleve_class WHERE eleve_id=?");
+        $query->execute([$eleve]);
+        $query = $this->db->prepare("DELETE FROM eleves WHERE id=?");
+        $query->execute([$eleve]);
+    }
 }

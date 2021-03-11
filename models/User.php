@@ -84,7 +84,27 @@ class User extends Model{
     }
     public function delete($id)
     {
-        $query = $this->db->prepare("DELETE FROM info_ecole WHERE id=?");
+        $query = $this->db->prepare("DELETE FROM users WHERE id=?");
+        $query->execute([$id]);
+    }
+    public function deleteEleve($id)
+    {
+        $eleve = new Eleve();
+        $eleve->delete($id);
+    }
+    public function deleteParent($id)
+    {
+        $parent = new Tuteur();
+        $parent->delete($id);
+    }
+    public function deleteEns($id)
+    {
+        $ens = new Enseignant();
+        $ens->deleteEns($id);
+    }
+    public function deleteAdmin($id)
+    {
+        $query = $this->db->prepare("DELETE FROM admin WHERE user_id=?");
         $query->execute([$id]);
     }
 }

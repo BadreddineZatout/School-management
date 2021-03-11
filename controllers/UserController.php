@@ -70,11 +70,25 @@ class UserController{
             case 3:
                 $this->user->updateAdmin();
                 break;
-            }
+        }
         header('location:/?action=admin-user');
     }
     public function delete()
     {
+        switch ($_GET['type']) {
+            case 0:
+                $this->user->deleteEleve($_GET['id']);
+                break;
+            case 1: 
+                $this->user->deleteParent($_GET['id']);
+                break;
+            case 2: 
+                $this->user->deleteEns($_GET['id']);
+                break;
+            case 3:
+                $this->user->deleteAdmin($_GET['id']);
+                break;
+        }
         $this->user->delete($_GET['id']);
     }
 }
