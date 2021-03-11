@@ -39,4 +39,9 @@ class Eleve extends Model{
         $row = $query->fetch(PDO::FETCH_ASSOC);
         return $row;
     }
+    public function store($id)
+    {
+        $query = $this->db->prepare("INSERT INTO eleves (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);
+    }
 }

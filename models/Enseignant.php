@@ -1,5 +1,5 @@
 <?php
-require 'models/Model.php';
+require_once 'models/Model.php';
 class Enseignant extends Model{
 
     public function getEns($cycle)
@@ -61,5 +61,10 @@ class Enseignant extends Model{
     {
         $query = $this->db->prepare("DELETE FROM enseignants_heure WHERE ens_id=? AND class_id=? AND heure=?");
         $query->execute([$id, $class, $heure]);
+    }
+    public function storeEns($id)
+    {
+        $query = $this->db->prepare("INSERT INTO enseignants (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);   
     }
 }

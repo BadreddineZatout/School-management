@@ -16,4 +16,9 @@ class Tuteur extends Model{
         $enfants = $query->fetchall();
         return $enfants;
     }
+    public function store($id)
+    {
+        $query = $this->db->prepare("INSERT INTO parents (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);
+    }
 }

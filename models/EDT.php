@@ -1,5 +1,5 @@
 <?php
-require 'models/Model.php';
+require_once 'models/Model.php';
 class edt extends Model{
 
     public function getEdt($cycle){

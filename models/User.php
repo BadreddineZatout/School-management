@@ -1,5 +1,8 @@
 <?php
-require 'Model.php';
+require_once 'models/Model.php';
+require_once 'models/Eleve.php';
+require_once 'Parent.php';
+require_once 'Enseignant.php';
 class User extends Model{
 
     public function login($user, $pdw)
@@ -30,18 +33,18 @@ class User extends Model{
     }
     public function storeEleve($id)
     {
-        $query = $this->db->prepare("INSERT INTO eleves (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);
+        $eleve = new Eleve();
+        $eleve->store($id);   
     }
     public function storeParent($id)
     {
-        $query = $this->db->prepare("INSERT INTO parents (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);
+        $parent = new Tuteur();
+        $parent->store($id);
     }
     public function storeEns($id)
     {
-        $query = $this->db->prepare("INSERT INTO enseignants (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);   
+        $ens = new Enseignant();
+        $ens->storeEns($id);
     }
     public function storeAdmin($id)
     {
@@ -52,6 +55,22 @@ class User extends Model{
     {
         $query = $this->db->prepare("UPDATE info_ecole SET paragraphe=?WHERE id=?");
         $query->execute([$_POST['paraMAJ'], $_POST['id']]);
+    }
+    public function updateEleve($id)
+    {
+
+    }
+    public function updateParent($id)
+    {
+        
+    }
+    public function updateEns($id)
+    {
+        
+    }
+    public function updateAdmin($id)
+    {
+        
     }
     public function delete($id)
     {

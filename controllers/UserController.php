@@ -1,5 +1,5 @@
 <?php
-include 'models/User.php';
+require_once 'models/User.php';
 class UserController{
     private $type;
     private $user;
