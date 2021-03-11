@@ -45,6 +45,21 @@ function buildUsers(rows){
         let telephone3 = $('<td></td>').text(row.telephone3);
         let username = $('<td></td>').text(row.username);
         let password = $('<td></td>').text(row.password);
+        let type = $('<td></td>');
+        switch (row.type) {
+            case '0':
+                type.text('Eleve');
+                break;
+            case '1':
+                type.text('Parent');
+                break;
+            case '2':
+                type.text('Enseignant');
+                break;
+            case '3': 
+                type.text('Admin');
+                break;
+        }
         let maj = $('<td></td>');
         maj.append(update_btn(row));
         let supp = $('<td></td>');
@@ -58,16 +73,26 @@ function buildUsers(rows){
         tr.append(telephone3);
         tr.append(username);
         tr.append(password);
+        tr.append(type);
         tr.append(maj);
         tr.append(supp);
         $('#users-body').append(tr);
     }
 }
 
-function prepare(id, titre, contenu){
-    $('#titreMAJ').attr('value', titre);
-    $('#contenuMAJ').text(contenu);
-    $('#id').attr('value', id);
+function prepare(row){
+    console.log(row);
+    $('#nomMAJ').attr('value', row.nom);
+    $('#prenomMAJ').attr('value', row.prenom);
+    $('#emailMAJ').attr('value', row.email);
+    $('#adresseMAJ').attr('value', row.adresse);
+    $('#tele1MAJ').attr('value', row.telephone1);
+    $('#tele2MAJ').attr('value', row.telephone2);
+    $('#tele3MAJ').attr('value', row.telephone3);
+    $('#userMAJ').attr('value', row.username);
+    $('#pdwMAJ').attr('value', row.password);
+    $('#id').attr('value', row.id);
+    $('#typeMAJ').val(row.type);
 }
 function prepare_supp(id){
     $('#supp').attr('onclick', 'supp('+id+')');
