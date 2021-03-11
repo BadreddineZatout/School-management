@@ -18,7 +18,7 @@ class UserController{
         return $this->user->login($username, $pdw);
     }
     public function redirectUser($type){
-        if ($type == 2){
+        if ($type == 3){
             $_SESSION['eleve_id'] = NULL;
             return 'location:/?action=admin';
         }
