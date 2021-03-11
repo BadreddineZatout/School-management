@@ -35,26 +35,42 @@ class UserController{
     }
     public function store()
     {
-        $id = $this->user->store();
-        switch ($_POST['type']) {
-            case 0:
-                $this->user->storeEleve($id);
-                break;
-            case 1: 
-                $this->user->storeParent($id);
-                break;
-            case 2: 
-                $this->user->storeEns($id);
-                break;
-            case 3:
-                $this->user->storeAdmin($id);
-                break;
-        }
+        if (!$this->user->existe()) {
+            $id = $this->user->store();
+            switch ($_POST['type']) {
+                case 0:
+                    $this->user->storeEleve($id);
+                    break;
+                case 1:
+                    $this->user->storeParent($id);
+                    break;
+                case 2:
+                    $this->user->storeEns($id);
+                    break;
+                case 3:
+                    $this->user->storeAdmin($id);
+                    break;
+            }
+        }        
         header('location:/?action=admin-user');
     }
     public function update()
     {
         $this->user->update();
+        switch ($_POST['typeMAJ']) {
+            case 0:
+            $this->user->updateEleve();
+            break;
+            case 1: 
+                $this->user->updateParent();
+                break;
+            case 2: 
+                $this->user->updateEns();
+                break;
+            case 3:
+                $this->user->updateAdmin();
+                break;
+            }
         header('location:/?action=admin-user');
     }
     public function delete()

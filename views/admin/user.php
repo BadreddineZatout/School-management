@@ -39,6 +39,7 @@
                 <th>Telephone 3</th>
                 <th>Nom Utilisateur</th>
                 <th>Mot de Passe</th>
+                <th>type</th>
                 <th></th>
                 <th></th>
             </thead>
@@ -128,11 +129,44 @@
           <!-- Modal body -->
         <form action="/?action=updateUser" method="post">
           <div class="modal-body">
-                <div class="form-group">
-                  <label for="paragraphe">Paragraphe:</label>
-                  <textarea class="form-control" name="paraMAJ" id="paraMAJ" required></textarea>
-                  <input type="hidden" name="id" id="id">
+          <div class="form-group">
+                  <label for="nomMAJ">Nom:</label>
+                  <input type="text" class="form-control" id="nomMAJ" name="nomMAJ" required>
                 </div>
+                <div class="form-group">
+                  <label for="prenomMAJ">Prenom:</label>
+                  <input type="text" class="form-control" id="prenomMAJ" name="prenomMAJ" required>
+                </div>
+                <div class="form-group">
+                  <label for="emailMAJ">Email:</label>
+                  <input type="text" class="form-control" id="emailMAJ" name="emailMAJ" required>
+                </div>
+                <div class="form-group">
+                  <label for="adresseMAJ">Adresse:</label>
+                  <input type="text" class="form-control" id="adresseMAJ" name="adresseMAJ" required>
+                </div>
+                <div class="form-group">
+                  <label for="tele1MAJ">Telephone 1:</label>
+                  <input type="text" class="form-control" id="tele1MAJ" name="tele1MAJ" required>
+                </div>
+                <div class="form-group">
+                  <label for="tele2MAJ">Telephone 2:</label>
+                  <input type="text" class="form-control" id="tele2MAJ" name="tele2MAJ">
+                </div>
+                <div class="form-group">
+                  <label for="tele3MAJ">Telephone 3:</label>
+                  <input type="text" class="form-control" id="tele3MAJ" name="tele3MAJ">
+                </div>
+                <div class="form-group">
+                  <label for="userMAJ">Nom Utilisateur:</label>
+                  <input type="text" class="form-control" id="userMAJ" name="userMAJ" required>
+                </div>
+                <div class="form-group">
+                  <label for="pdwMAJ">Mot de passe:</label>
+                  <input type="text" class="form-control" id="pdwMAJ" name="pdwMAJ" required>
+                </div>
+                <input type="hidden" name="id" id="id">
+                <input type="hidden" name="typeMAJ" id="typeMAJ">
             </div>
             
             <!-- Modal footer -->

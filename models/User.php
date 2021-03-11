@@ -23,6 +23,12 @@ class User extends Model{
         $rows = $query->fetchAll();
         return $rows;
     }
+    public function existe()
+    {
+        $query = $this->db->prepare("SELECT id FROM users WHERE username = ?");
+        $query->execute([$_POST['userMAJ']]);
+        return $query->fetch(PDO::FETCH_ASSOC);
+    }
     public function store()
     {
         $query = $this->db->prepare("INSERT INTO users (username, password, type) VALUES (?, ?, ?)");
@@ -53,24 +59,28 @@ class User extends Model{
     }
     public function update()
     {
-        $query = $this->db->prepare("UPDATE info_ecole SET paragraphe=?WHERE id=?");
-        $query->execute([$_POST['paraMAJ'], $_POST['id']]);
+        $query = $this->db->prepare("UPDATE users SET username=?, password= ? WHERE id=?");
+        $query->execute([$_POST['userMAJ'], $_POST['pdwMAJ'], $_POST['id']]);
     }
-    public function updateEleve($id)
+    public function updateEleve()
     {
-
+        $eleve = new Eleve();
+        $eleve->update();  
     }
-    public function updateParent($id)
+    public function updateParent()
     {
-        
+        $parent = new Tuteur();
+        $parent->update();   
     }
-    public function updateEns($id)
+    public function updateEns()
     {
-        
+        $ens = new Enseignant();
+        $ens->updateEns();
     }
-    public function updateAdmin($id)
+    public function updateAdmin()
     {
-        
+        $query = $this->db->prepare("UPDATE admin SET nom=?, prenom= ?, adresse=?, email=?, telephone1=?, telephone2=?, telephone3=? WHERE user_id=?");
+        $query->execute([$_POST['nomMAJ'], $_POST['prenomMAJ'], $_POST['adresseMAJ'], $_POST['emailMAJ'], $_POST['tele1MAJ'], $_POST['tele2MAJ'], $_POST['tele3MAJ'], $_POST['id']]);   
     }
     public function delete($id)
     {
