@@ -22,8 +22,31 @@ class User extends Model{
     }
     public function store()
     {
-        $query = $this->db->prepare("INSERT INTO info_ecole (paragraphe, image) VALUES (?, ?)");
-        $query->execute([$_POST['paragraphe'], 'data/images/'.$_FILES['image_add']['name']]);
+        $query = $this->db->prepare("INSERT INTO users (username, password, type) VALUES (?, ?, ?)");
+        $query->execute([$_POST['user'],$_POST['pdw'],$_POST['type']]);
+        $query = $this->db->prepare("SELECT max(id) as id FROM users");
+        $query->execute();
+        return $query->fetch(PDO::FETCH_ASSOC)['id'];
+    }
+    public function storeEleve($id)
+    {
+        $query = $this->db->prepare("INSERT INTO eleves (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);
+    }
+    public function storeParent($id)
+    {
+        $query = $this->db->prepare("INSERT INTO parents (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);
+    }
+    public function storeEns($id)
+    {
+        $query = $this->db->prepare("INSERT INTO enseignants (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);   
+    }
+    public function storeAdmin($id)
+    {
+        $query = $this->db->prepare("INSERT INTO admin (nom, prenom, adresse, email, telephone1, telephone2, telephone3, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $query->execute([$_POST['nom'],$_POST['prenom'],$_POST['adresse'], $_POST['email'], $_POST['tele1'], $_POST['tele2'], $_POST['tele3'], $id]);
     }
     public function update()
     {

@@ -59,12 +59,49 @@
         <form action="/?action=storeUser" method="POST" enctype="multipart/form-data">
           <div class="modal-body">
                 <div class="form-group">
-                  <label for="contenu">Paragraphe:</label>
-                  <textarea class="form-control" name="paragraphe" id="paragraphe" placeholder="Introduire Paragraphe" required></textarea>
+                  <label for="nom">Nom:</label>
+                  <input type="text" class="form-control" id="nom" name="nom" required>
                 </div>
                 <div class="form-group">
-                  <label for="img">Image:</label>
-                  <input type="file" class="form-control" name="image_add" id="img" required>
+                  <label for="prenom">Prenom:</label>
+                  <input type="text" class="form-control" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="text" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="adresse">Adresse:</label>
+                  <input type="text" class="form-control" id="adresse" name="adresse" required>
+                </div>
+                <div class="form-group">
+                  <label for="tele1">Telephone 1:</label>
+                  <input type="text" class="form-control" id="tele1" name="tele1" required>
+                </div>
+                <div class="form-group">
+                  <label for="tele2">Telephone 2:</label>
+                  <input type="text" class="form-control" id="tele2" name="tele2">
+                </div>
+                <div class="form-group">
+                  <label for="tele3">Telephone 3:</label>
+                  <input type="text" class="form-control" id="tele3" name="tele3">
+                </div>
+                <div class="form-group">
+                  <label for="user">Nom Utilisateur:</label>
+                  <input type="text" class="form-control" id="user" name="user" required>
+                </div>
+                <div class="form-group">
+                  <label for="pdw">Mot de passe:</label>
+                  <input type="text" class="form-control" id="pdw" name="pdw" required>
+                </div>
+                <div class="form-group">
+                  <label for="type">Type d'utilisateur:</label>
+                  <select class="form-control" id="type" name="type" required>
+                    <option value="0">Eleve</option>
+                    <option value="1">Parent</option>
+                    <option value="2">Enseignant</option>
+                    <option value="3">Admin</option>
+                  </select>
                 </div>
             </div>
             

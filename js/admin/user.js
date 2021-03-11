@@ -31,6 +31,7 @@ function delete_btn(id){
     del.attr('onclick', 'prepare_supp('+id+')');
     return del;
 }
+//TODO add user type to table
 function buildUsers(rows){
     $('#users-body').html('');
     for (let row of rows) {

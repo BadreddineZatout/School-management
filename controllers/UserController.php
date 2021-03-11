@@ -35,7 +35,21 @@ class UserController{
     }
     public function store()
     {
-        $this->user->store();
+        $id = $this->user->store();
+        switch ($_POST['type']) {
+            case 0:
+                $this->user->storeEleve($id);
+                break;
+            case 1: 
+                $this->user->storeParent($id);
+                break;
+            case 2: 
+                $this->user->storeEns($id);
+                break;
+            case 3:
+                $this->user->storeAdmin($id);
+                break;
+        }
         header('location:/?action=admin-user');
     }
     public function update()

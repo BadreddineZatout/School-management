@@ -2,7 +2,7 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-    if(!isset($_SESSION['username']) || $_SESSION['type']<2){
+    if(!isset($_SESSION['username']) || $_SESSION['type']<3){
         header('location:/?action=admin_login');
     }
 ?>
