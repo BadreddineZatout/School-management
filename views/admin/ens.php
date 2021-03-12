@@ -80,11 +80,11 @@
             </div>
             <div class="form-group">
                   <label for="heure">Heure:</label>
-                  <input type="text" class="form-control" id="heure" name="heure" placeholder="entre 08h et 5h30" required>
+                  <input pattern="[0-2][0-9]h[0-5][0-9]" type="text" class="form-control" id="heure" name="heure" placeholder="entre 08h et 5h30" required>
             </div>
             <div class="form-group">
                   <label for="recep">Heure de Reception:</label>
-                  <input type="text" class="form-control" id="recep" name="recep" placeholder="si deja inserer c'est pas la peine a le refaire">
+                  <input pattern="[A-Za-z]*[0-2][0-9]h[0-5][0-9]" type="text" class="form-control" id="recep" name="recep" placeholder="si deja inserer c'est pas la peine de le refaire">
             </div>
           </div>
             
@@ -113,7 +113,7 @@
           <div class="modal-body">
           <div class="form-group">
                   <label for="recepMAJ">Heure de Reception:</label>
-                  <input type="text" class="form-control" id="recepMAJ" name="recepMAJ">
+                  <input pattern="[A-Za-z]+\s[0-2][0-9]h[0-5][0-9]" type="text" class="form-control" id="recepMAJ" name="recepMAJ">
                   <input type="hidden" name="id" id="id">
             </div>
             </div>
