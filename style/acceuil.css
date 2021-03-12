@@ -43,9 +43,6 @@ div.slide-images:hover{
 }
 /*************************end animation*****************************/
 @media only screen and (max-width: 600px){
-    i.fab{
-        display: none;
-    }
     div.slider-frame{
         display: none;
     }
