@@ -57,11 +57,11 @@
                 </div>
                 <div class="form-group">
                   <label for="phone">Telephone:</label>
-                  <input type="text" class="form-control" id="phone" name="phone" required>
+                  <input pattern="0[5-7][0-9]{8}" type="text" class="form-control" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
                   <label for="fax">Fax:</label>
-                  <input type="text" class="form-control" id="fax" name="fax" required>
+                  <input pattern="0[2-3][0-9]{7}" type="text" class="form-control" id="fax" name="fax" required>
                 </div>
             </div>
             
