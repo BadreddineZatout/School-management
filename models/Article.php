@@ -2,8 +2,12 @@
 require_once 'models/Model.php';
 class Article extends Model{
     public function getArticles($offset){
-        $sql = 'SELECT * FROM articles ORDER BY id DESC LIMIT '. $offset.', 8';
-        return $this->db->query($sql);
+        $offset *= 8; 
+        // $sql = 'SELECT * FROM articles ORDER BY id DESC LIMIT '. $offset.', 8';
+        $query = $this->db->prepare('SELECT * FROM articles ORDER BY id DESC LIMIT '.$offset.', 8');
+        $query->execute();
+        return $query->fetchAll();
+        // return $this->db->query($sql);
     }
     public function getArticle($id)
     {

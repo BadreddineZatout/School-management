@@ -8,8 +8,10 @@ class ArticlesController{
     {
         $this->article = new Article();
     }
-    public function getArticles(){
-        return $this->article->getArticles(0);
+    public function getArticles($offset){
+        if(isset($_GET['index'])){
+            return json_encode($this->article->getArticles($offset));    
+        }else return $this->article->getArticles($offset);
     }
     public function getArticle($id)
     {

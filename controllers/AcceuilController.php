@@ -13,7 +13,7 @@ class AcceuilController{
     }
     public function get_articles(){
         $ac = new ArticlesController();
-        $articles = $ac->getArticles();
+        $articles = $ac->getArticles(0);
         $articles = $ac->div_article($articles);
         return $articles;
     }

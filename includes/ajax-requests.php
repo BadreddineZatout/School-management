@@ -15,4 +15,9 @@ switch ($_GET['action']) {
         $ec = new EleveController();
         echo($ec->getRemarques());
         break;
+    case 'articles':
+        require_once ('./controllers/ArticleController.php');
+        $ac = new ArticlesController();
+        echo ($ac->getArticles($_GET['index']));
+        break;
     }

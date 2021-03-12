@@ -1,0 +1,13 @@
+div.pager{
+    width: 100%;
+}
+div.pager button.btn{
+    border: solid #F88F01 1px;
+    margin-left: 5px;
+    color: #58391C;
+    font-size: 24px;
+}
+div.pager button.btn:hover{
+    background-color: #F88F01;
+    font-weight: bolder;
+}

@@ -6,6 +6,7 @@
     <?php   require_once 'includes/link.php' ?>
     <link rel="stylesheet" href="../style/acceuil.css">
     <link rel="stylesheet" href="style/articles.css">
+    <link rel="stylesheet" href="style/pager.css">
     <title>Acceuil</title>
 </head>
 <body>
@@ -63,6 +64,14 @@
             </div>
         <?php } ?>
         </div>
+        <div class="pager d-flex justify-content-end mt-5 pr-5">
+                <div>
+                    <button id="previous" class="btn">Previous</button>
+                </div>
+                <div>
+                    <button id="next" class="btn">Next</button>
+                </div>
+        </div>
     <?php
         require 'includes/footer.php'
     ?>
@@ -70,4 +79,5 @@
 <?php
 require 'includes/responsive.php';
 ?>
+<script src="../js/pager.js"></script>
 </html>
