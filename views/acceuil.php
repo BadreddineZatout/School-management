@@ -15,10 +15,15 @@
     ?>
     <div class="slider-frame">
         <div class="slide-images">
+        <?php
+            foreach ($images as $image) {
+                ?>
             <div class="img-container">
-                <img src="data/images/img.jpg" alt="image" width="100%" height="100%">
+                <img src="<?= $image['image'] ?>" alt="image" width="100%" height="100%">
             </div>
-            <div class="img-container">
+        <?php
+            } ?>
+            <!-- <div class="img-container">
                 <img src="data/images/img2.jpg" alt="image" width="100%" height="100%">
             </div>
             <div class="img-container">
@@ -26,7 +31,7 @@
             </div>
             <div class="img-container">
                 <img src="data/images/img4.jpg" alt="image" width="100%" height="100%">
-            </div>
+            </div> -->
         </div>
     </div>
     <?php
