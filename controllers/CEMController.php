@@ -8,7 +8,6 @@ class CEMController{
         $articles = $this->get_articles();
         $vue = new CEM();
         $vue->Cem($articles);
-        // require_once 'views/cem.php';
     }
     
     public function get_articles(){
