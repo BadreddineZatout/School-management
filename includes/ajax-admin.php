@@ -150,4 +150,9 @@ switch ($_GET['action']) {
         $ec = new EDTController();
         echo($ec->getMatieres());
         break;
+    case 'deleteimage': 
+        require_once './controllers/DiaporamaController.php';
+        $dc = new DiaporamaController();
+        $dc->delete($_GET['image']);
+        break;
     }

@@ -1,5 +1,4 @@
 <?php
-
 class AdminController{
 
     private $type = 2;
@@ -32,6 +31,9 @@ class AdminController{
                 require_once 'views/admin/contact.php';
                 break;
             case 8:
+                require_once 'DiaporamaController.php';
+                $dc = new DiaporamaController();
+                $images = $dc->getImages();
                 require_once 'views/admin/parametre.php';
                 break;
         }
