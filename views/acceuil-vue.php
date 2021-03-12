@@ -1,45 +1,19 @@
-<?php
-require_once 'View.php';
-class AcceuileView extends View{
-    public function Acceuil($articles, $images){?>
-    <!DOCTYPE html>
-        <html lang="en">
-        <?php
-            $this->head();
-        ?>
-            <body>
-            <?php
-                $this->header();
-                $this->diapo($images);
-                $this->menu();
-                $this->articles($articles);
-                $this->footer();
-            ?>
-            </body>
-            <?php
-            $this->scripts();
-            $this->pager();
-            ?>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php   require_once 'includes/link.php' ?>
+    <link rel="stylesheet" href="../style/acceuil.css">
+    <link rel="stylesheet" href="style/articles.css">
+    <link rel="stylesheet" href="style/pager.css">
+    <title>Acceuil</title>
+</head>
+<body>
     <?php
-    }
-    private function head(){
-        ?>
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <?php   require_once 'includes/link.php'?>
-            <link rel="stylesheet" href="../style/acceuil.css">
-            <link rel="stylesheet" href="style/articles.css">
-            <link rel="stylesheet" href="style/pager.css">
-            <title>Acceuil</title>
-        </head>
-    <?php
-    }
-    
-    private function diapo($images){
-        ?>
-        <div class="slider-frame">
+        require 'includes/header.php';
+    ?>
+    <div class="slider-frame">
         <div class="slide-images">
         <?php
             foreach ($images as $image) {
@@ -52,10 +26,9 @@ class AcceuileView extends View{
         </div>
     </div>
     <?php
-    }
-    private function articles($articles){
-        ?>
-        <div class="row mx-auto mb-5">
+        require 'includes/menu.php'
+    ?>
+    <div class="row mx-auto mb-5">
         
         <div id="a1" class="col-sm-12 card-deck">
         <?php 
@@ -95,11 +68,12 @@ class AcceuileView extends View{
                     <button id="next" class="btn">Next</button>
                 </div>
         </div>
-    <?php    
-    }
-    private function pager(){
-        ?>
-        <script src="../js/pager.js"></script>
     <?php
-    }
-}
+        require 'includes/footer.php'
+    ?>
+</body>
+<?php
+require 'includes/responsive.php';
+?>
+<script src="../js/pager.js"></script>
+</html>

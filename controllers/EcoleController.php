@@ -1,5 +1,6 @@
 <?php
-require 'models/info_ecole.php';
+require_once 'models/info_ecole.php';
+require_once 'views/ecole.php';
 class EcoleController{
     private $ppt;
     
@@ -9,8 +10,9 @@ class EcoleController{
     }
     public function ppt_page()
     {
+        $vue = new Ecole();
         $infos = $this->get_info();
-        require_once ('views/ecole.php');
+        $vue->Ecole($infos);
     }
 
     public function get_info()

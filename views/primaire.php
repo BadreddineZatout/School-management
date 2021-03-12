@@ -2,24 +2,46 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once 'includes/link.php' ?>
-    <link rel="stylesheet" href="style/articles.css">
-    <title>Primaire</title>
-</head>
-<body>
+require_once 'View.php';
+class Primaire extends View{
+    public function Primaire($articles){
+        ?>
+    <!DOCTYPE html>
+    <html lang="en">
     <?php 
-        require_once 'includes/header.php';
-        require_once 'includes/menu.php';
-        $pc->get_cadres(1);
+        $this->head();
     ?>
-    
+    <body>    
+    <?php
+        $this->header();
+        $this->menu();
+        $this->get_cadres(1);
+        $this->articles($articles);
+    ?>
+    </body>
+    <?php
+    $this->scripts();
+    ?>
+    </html>
+    <?php
+    }
+    private function head(){
+        ?>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php require_once 'includes/link.php' ?>
+        <link rel="stylesheet" href="style/articles.css">
+        <title>Primaire</title>
+    </head>
+    <?php
+    }
+    private function get_cadres($cycle){
+        require_once 'views/cycle/cycle-cadre.php';
+    }
+    private function articles($articles){
+        ?>
     <div class="row mx-auto mb-5">
         <div class="col-sm-12 card-deck">
         <?php 
@@ -53,10 +75,6 @@
         </div>
     </div>
     <?php
-        require_once 'includes/footer.php'
-    ?>
-</body>
-<?php
-require 'includes/responsive.php';
+    }
+}
 ?>
-</html>

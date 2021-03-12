@@ -1,12 +1,14 @@
 <?php
 require_once 'ArticleController.php';
 require_once 'DiaporamaController.php';
+require_once 'views/acceuil.php';
 class AcceuilController{
 
     public function main_page(){
         $articles = $this->get_articles();
         $images = $this->diaporama();
-        require ('views/acceuil.php');
+        $vue = new AcceuileView();
+        $vue->Acceuil($articles, $images);
     }
     public function article_page()
     {

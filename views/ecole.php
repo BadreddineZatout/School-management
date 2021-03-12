@@ -1,23 +1,42 @@
 <?php
-    if(!isset($_GET['action'])){
-        header('location:/');
-    }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once 'includes/link.php' ?>
-    <link rel="stylesheet" href="/style/ecole.css">
-    <title>Presentation</title>
-</head>
-<body>
+if(!isset($_GET['action'])){
+    header('location:/');
+}
+require_once 'View.php';
+class Ecole extends View{
+    public function Ecole($infos){
+        ?>
+    <!DOCTYPE html>
+    <html lang="en">
+        <?php 
+            $this->head();
+        ?>
+    <body>
+        <?php
+        $this->header();
+        $this->menu();
+        $this->infos($infos);
+        $this->footer();
+        $this->scripts();
+        ?>
+    </body>
+    </html>
     <?php
-        require_once 'includes/header.php';
-        require_once 'includes/menu.php';
-    ?>
+    }
+    private function head(){
+        ?>
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <?php require_once 'includes/link.php' ?>
+            <link rel="stylesheet" href="/style/ecole.css">
+            <title>Presentation</title>
+        </head>
+    <?php
+    }
+    private function infos($infos){
+        ?>
     <div class="row mx-auto">
         <div class="col-sm-10 card ppt mx-auto">
             <div class='card-header'>
@@ -44,10 +63,5 @@
         </div>
     </div>
     <?php
-        require_once 'includes/footer.php'
-    ?>
-</body>
-<?php
-require 'includes/responsive.php';
-?>
-</html>
+    }
+}

@@ -2,24 +2,48 @@
     if(!isset($_GET['action'])){
         header('location:/');
     }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php require_once 'includes/link.php' ?>
-    <link rel="stylesheet" href="style/articles.css">
-    <title>Moyen</title>
-</head>
-<body>
-    <?php 
-        require_once 'includes/header.php';
-        require_once 'includes/menu.php';
-        $cc->get_cadres(2);
-    ?>
-    <div class="row mx-auto mb-5">
+require_once 'View.php';
+class CEM extends View{
+    public function Cem($articles){
+        ?>
+        <!DOCTYPE html>
+        <html lang="en">
+        <?php
+            $this->head();
+        ?>
+        <body>
+            <?php 
+                $this->header();
+                $this->menu();
+                $this->get_cadres(2);
+                $this->articles($articles);
+                $this->footer();
+            ?>
+        </body>
+        <?php
+            $this->scripts();
+        ?>
+        </html>
+<?php
+    }
+    private function head(){
+        ?>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php require_once 'includes/link.php' ?>
+        <link rel="stylesheet" href="style/articles.css">
+        <title>Moyen</title>
+    </head>
+    <?php
+    }
+    private function get_cadres($cycle){
+        require_once 'views/cycle/cycle-cadre.php';
+    }
+    private function articles($articles){
+        ?>
+        <div class="row mx-auto mb-5">
         <div class="col-sm-12 card-deck">
         <?php 
             foreach($articles[0] as $article)
@@ -52,10 +76,6 @@
         </div>
     </div>
     <?php
-        require_once 'includes/footer.php'
-    ?>
-</body>
-<?php
-require 'includes/responsive.php';
+    }
+}
 ?>
-</html>

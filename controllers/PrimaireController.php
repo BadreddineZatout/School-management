@@ -1,14 +1,12 @@
 <?php
 include 'ArticleController.php';
+require_once 'views/primaire.php';
 class PrimaireController{
     public function primaire_page()
     {
-        $pc = $this;
         $articles = $this->get_articles();
-        require_once 'views/primaire.php';
-    }
-    public function get_cadres($cycle){
-        require_once 'views/cycle/cycle-cadre.php';
+        $vue = new Primaire();
+        $vue->Primaire($articles);
     }
     public function get_articles(){
         $ac = new ArticlesController();
