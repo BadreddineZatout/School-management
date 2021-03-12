@@ -27,13 +27,13 @@
                 foreach ($infos as $info) {
                     ?>
             <div class="card-body row ppt mx-1 my-1">
-                <div class="col">
+                <div class="col-sm-8">
                     <p><?= $info['paragraphe'] ?></p>
                 </div>
                 <?php
                     if (!is_null($info['image'])) {
                         ?>
-                <div class="col-4 mr-auto">
+                <div class="col-sm-4 mr-auto">
                     <img src="<?= $info['image'] ?>" height="300px" width="400px" alt="">
                 </div>
             </div>
