@@ -61,15 +61,15 @@
           <div class="modal-body">
                 <div class="form-group">
                   <label for="nom">Nom:</label>
-                  <input type="text" class="form-control" id="nom" name="nom" required>
+                  <input pattern="[A-Za-z]*" type="text" class="form-control" id="nom" name="nom" required>
                 </div>
                 <div class="form-group">
                   <label for="prenom">Prenom:</label>
-                  <input type="text" class="form-control" id="prenom" name="prenom" required>
+                  <input pattern="[A-Za-z]*" type="text" class="form-control" id="prenom" name="prenom" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="text" class="form-control" id="email" name="email" required>
+                  <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                   <label for="adresse">Adresse:</label>
@@ -77,15 +77,15 @@
                 </div>
                 <div class="form-group">
                   <label for="tele1">Telephone 1:</label>
-                  <input type="text" class="form-control" id="tele1" name="tele1" required>
+                  <input pattern="0[5-7][0-9]{8}" type="text" class="form-control" id="tele1" name="tele1" required>
                 </div>
                 <div class="form-group">
                   <label for="tele2">Telephone 2:</label>
-                  <input type="text" class="form-control" id="tele2" name="tele2">
+                  <input pattern="0[5-7][0-9]{8}" type="text" class="form-control" id="tele2" name="tele2">
                 </div>
                 <div class="form-group">
                   <label for="tele3">Telephone 3:</label>
-                  <input type="text" class="form-control" id="tele3" name="tele3">
+                  <input pattern="0[5-7][0-9]{8}" type="text" class="form-control" id="tele3" name="tele3">
                 </div>
                 <div class="form-group">
                   <label for="user">Nom Utilisateur:</label>
@@ -131,15 +131,15 @@
           <div class="modal-body">
           <div class="form-group">
                   <label for="nomMAJ">Nom:</label>
-                  <input type="text" class="form-control" id="nomMAJ" name="nomMAJ" required>
+                  <input pattern="[A-Za-z]*" type="text" class="form-control" id="nomMAJ" name="nomMAJ" required>
                 </div>
                 <div class="form-group">
                   <label for="prenomMAJ">Prenom:</label>
-                  <input type="text" class="form-control" id="prenomMAJ" name="prenomMAJ" required>
+                  <input pattern="[A-Za-z]*" type="text" class="form-control" id="prenomMAJ" name="prenomMAJ" required>
                 </div>
                 <div class="form-group">
                   <label for="emailMAJ">Email:</label>
-                  <input type="text" class="form-control" id="emailMAJ" name="emailMAJ" required>
+                  <input type="email" class="form-control" id="emailMAJ" name="emailMAJ" required>
                 </div>
                 <div class="form-group">
                   <label for="adresseMAJ">Adresse:</label>
@@ -147,15 +147,15 @@
                 </div>
                 <div class="form-group">
                   <label for="tele1MAJ">Telephone 1:</label>
-                  <input type="text" class="form-control" id="tele1MAJ" name="tele1MAJ" required>
+                  <input pattern="0[5-7][0-9]{8}" type="text" class="form-control" id="tele1MAJ" name="tele1MAJ" required>
                 </div>
                 <div class="form-group">
                   <label for="tele2MAJ">Telephone 2:</label>
-                  <input type="text" class="form-control" id="tele2MAJ" name="tele2MAJ">
+                  <input pattern="0[5-7][0-9]{8}" type="text" class="form-control" id="tele2MAJ" name="tele2MAJ">
                 </div>
                 <div class="form-group">
                   <label for="tele3MAJ">Telephone 3:</label>
-                  <input type="text" class="form-control" id="tele3MAJ" name="tele3MAJ">
+                  <input pattern="0[5-7][0-9]{8}" type="text" class="form-control" id="tele3MAJ" name="tele3MAJ">
                 </div>
                 <div class="form-group">
                   <label for="userMAJ">Nom Utilisateur:</label>
