@@ -40,9 +40,41 @@
                 </div>
             </div>
         <?php } ?>
+    </div>
+    <div class="modal" id="AddModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Ajouter Un Article</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+        <form action="/?action=storeimage" method="POST" enctype="multipart/form-data">
+          <div class="modal-body">
+                <div class="form-group">
+                  <label for="img">Image:</label>
+                  <input type="file" class="form-control" name="image_add" id="img" required>
+                </div>
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn submit">Submit</button>
+                <button type="button" class="btn cancel" data-dismiss="modal">Close</button>
+            </div>
+        </form>
+
         </div>
+      </div>
+    </div>
     <?php
         require_once 'includes/footer.php'
     ?>
 </body>
+<?php
+        require_once 'includes/admin-script.php';
+    ?>
 </html>

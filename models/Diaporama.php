@@ -9,7 +9,8 @@ class Diaporama extends Model{
     }
     public function store()
     {
-
+        $query = $this->db->prepare("INSERT INTO diaporama (image) VALUES (?)");
+        $query->execute(['data/diaporama/'.$_FILES['image_add']['name']]);
     }
     public function delete($id){
         $query = $this->db->prepare("Delete FROM diaporama WHERE id=?");
