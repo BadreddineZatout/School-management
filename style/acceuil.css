@@ -6,7 +6,7 @@
 */
 .slider-frame{
     overflow: hidden;
-    height: 20%;
+    height: 500px;
     width: 70%;
     margin:10px auto ;
 }
@@ -14,14 +14,14 @@
 @-webkit-keyframes slide-animation{
     0% {bottom: 0px;}
     10% {bottom: 0px;}
-    20% {bottom: calc(500px + 5%);}
-    30% {bottom: calc(500px + 5%);}
-    40% {bottom: calc(1000px + 10%);}
-    50% {bottom: calc(1000px + 10%);}
-    60% {bottom: calc(1500px + 15%);}
-    70% {bottom: calc(1500px + 15%);}
-    80% {bottom: calc(1000px + 10%);}
-    90% {bottom: calc(500px + 5%);}
+    20% {bottom: calc(500px);}
+    30% {bottom: calc(500px);}
+    40% {bottom: calc(1000px);}
+    50% {bottom: calc(1000px);}
+    60% {bottom: calc(1500px);}
+    70% {bottom: calc(1500px);}
+    80% {bottom: calc(1000px);}
+    90% {bottom: calc(500px);}
     100% {bottom: 0px;}
 }
 .slide-images{

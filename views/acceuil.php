@@ -19,19 +19,10 @@
             foreach ($images as $image) {
                 ?>
             <div class="img-container">
-                <img src="<?= $image['image'] ?>" alt="image" width="100%" height="100%">
+                <img src="<?= $image['image'] ?>" alt="image" width="100%" height="500px">
             </div>
         <?php
             } ?>
-            <!-- <div class="img-container">
-                <img src="data/images/img2.jpg" alt="image" width="100%" height="100%">
-            </div>
-            <div class="img-container">
-                <img src="data/images/img3.png" alt="image" width="100%" height="100%">
-            </div>
-            <div class="img-container">
-                <img src="data/images/img4.jpg" alt="image" width="100%" height="100%">
-            </div> -->
         </div>
     </div>
     <?php
