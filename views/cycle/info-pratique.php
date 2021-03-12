@@ -41,4 +41,7 @@
         require_once 'includes/footer.php'
     ?>
 </body>
+<?php
+require 'includes/responsive.php';
+?>
 </html>
