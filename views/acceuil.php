@@ -34,7 +34,7 @@
     ?>
     <div class="row mx-auto mb-5">
         
-        <div class="col-sm-12 card-deck">
+        <div id="a1" class="col-sm-12 card-deck">
         <?php 
             foreach($articles[0] as $article)
             {
@@ -49,7 +49,7 @@
             </div>
         <?php } ?>
         </div>
-        <div class="col-sm-12 card-deck">
+        <div id="a2" class="col-sm-12 card-deck">
         <?php 
             foreach($articles[1] as $article)
             {
