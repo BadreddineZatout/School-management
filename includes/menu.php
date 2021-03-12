@@ -1,8 +1,8 @@
 <div id="menu-container" class="navbar navbar-expand-sm">
-    <button class="navbar-toggler mb-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <button id="menu-toggler" class="navbar-toggler mb-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         Menu
     </button>
-    <div class="collapse navbar-collapse justify-content-center mr-5" id="collapsibleNavbar"">
+    <div class="collapse navbar-collapse justify-content-center mr-5" id="collapsibleNavbar">
         <ul id="menu" class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="/">Acceuil</a></li>
             <li class="nav-item"><a class="nav-link" href="/?action=ecole">Presentation</a></li>
