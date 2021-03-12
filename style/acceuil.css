@@ -42,6 +42,11 @@ div.slide-images:hover{
     -webkit-animation-play-state: paused;
 }
 /*************************end animation*****************************/
-
-
-
+@media only screen and (max-width: 600px){
+    i.fab{
+        display: none;
+    }
+    div.slider-frame{
+        display: none;
+    }
+}

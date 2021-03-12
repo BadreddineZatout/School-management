@@ -3,3 +3,4 @@
 <script src="../js/activite.js"></script>
 <script src="../js/remarque.js"></script>
 <script src="../js/eleve.js"></script>
+<script src="../js/responsive.js"></script>

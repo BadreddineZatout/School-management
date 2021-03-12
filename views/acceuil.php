@@ -33,12 +33,12 @@
     ?>
     <div class="row mx-auto mb-5">
         
-        <div class="col-12 card-deck">
+        <div class="col-sm-12 card-deck">
         <?php 
             foreach($articles[0] as $article)
             {
         ?> 
-            <div class="card col-3">
+            <div class="card col-sm-3">
                 <img class="card-img-top" src="<?= $article['image'] ?>" alt="card image">
                 <div class="card-body">
                     <h4 class="card-title"><?= $article['titre'] ?></h4>
@@ -48,12 +48,12 @@
             </div>
         <?php } ?>
         </div>
-        <div class="col-12 card-deck">
+        <div class="col-sm-12 card-deck">
         <?php 
             foreach($articles[1] as $article)
             {
         ?> 
-            <div class="card col-3">
+            <div class="card col-sm-3">
                 <img class="card-img-top" src="<?= $article['image'] ?>" alt="card image">
                 <div class="card-body">
                     <h4 class="card-title"><?= $article['titre'] ?></h4>
@@ -67,4 +67,7 @@
         require 'includes/footer.php'
     ?>
 </body>
+<?php
+require 'includes/responsive.php';
+?>
 </html>

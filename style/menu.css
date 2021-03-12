@@ -46,3 +46,11 @@
 li.drop:hover .dropdown{
     display: block;
 }
+.navbar-toggler{
+    color: white;
+    font-size: 24px;
+    background-color: #E27802;
+    border: solid #58391C;
+    width: 100vw;
+    padding: 10px;
+}
